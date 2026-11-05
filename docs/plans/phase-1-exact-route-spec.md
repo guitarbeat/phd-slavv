@@ -43,7 +43,7 @@ Ship confidence requires a **reproducible** certification on a **single canonica
 
 - **A1. Maintainer / developer:** Runs parity experiments, interprets `prove-exact` reports, and decides when ship confidence is achieved.
 - **A2. Public SLAVV user:** Runs `slavv run` with the **paper** profile expecting MATLAB-faithful results without running the parity harness (`matlab_compat` is out of scope unless reprioritized).
-- **A3. MATLAB oracle:** Preserved truth vectors under `workspace/oracles/` derived from neurovasc-db (`180709_E` vectorization batch).
+- **A3. MATLAB oracle:** Preserved truth vectors under `workspace/oracles/` derived from phd-database (`180709_E` vectorization batch).
 
 ## Key flows
 
@@ -112,7 +112,7 @@ Ship confidence requires a **reproducible** certification on a **single canonica
 
 **In scope:** `180709_E` certification program; oracle bootstrap; diagnostics after v29.
 
-**Deferred:** All neurovasc-db volumes; CI merge-blocking parity; third-party reproduction as primary deliverable; open-ended refactors not tied to a failing `prove-exact` stage.
+**Deferred:** All phd-database volumes; CI merge-blocking parity; third-party reproduction as primary deliverable; open-ended refactors not tied to a failing `prove-exact` stage.
 
 **Outside identity:** Replacing paper workflow with exact-route-only defaults for all users; claiming equivalence without passing `prove-exact` for that workflow.
 

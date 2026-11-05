@@ -206,6 +206,7 @@ comparisons/
 index.jsonl
 
 # Exclude external from scans. Vectorization-Public is the GitHub MATLAB submodule.
-# neurovasc-db stays a local catalog (url D:/db in .gitmodules; not clone-required).
+# phd-database stays a local catalog (url D:/db in .gitmodules;
+# GitHub guitarbeat/phd-database; not clone-required).
 external/*
 !external/Vectorization-Public/

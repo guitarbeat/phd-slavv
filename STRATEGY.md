@@ -42,7 +42,7 @@ _Why it serves the approach:_ The certified route is correct-enough but compute-
 
 ### Breadth
 
-Additional real volumes (`neurovasc-db`) and later packaging/UX, after the exact route is trusted.
+Additional real volumes (`phd-database`, GitHub `guitarbeat/phd-database`) and later packaging/UX, after the exact route is trusted.
 
 _Why it serves the approach:_ One canonical volume is the cert surface, not the whole scientific claim.
 
@@ -53,5 +53,5 @@ _Why it serves the approach:_ One canonical volume is the cert surface, not the 
 ## Not working on
 
 - Reopening Phase 1 or overwriting protected dests (`canonical_full_v18`, `v16`, `crop_M_exact_v3`, `crop_M_stretch_engine_v2`).
-- Stretch U5/U6, Fortran unwind, paper-profile writers, or neurovasc-db writers without the documented unlock/ADR.
+- Stretch U5/U6, Fortran unwind, paper-profile writers, or phd-database writers without the documented unlock/ADR.
 - Calling allclose, ownership %, or matlab2python “100% parity”; Network rewrite as the default residual fix.

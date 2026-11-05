@@ -3,6 +3,7 @@
 	url = https://github.com/UTFOIL/Vectorization-Public.git
 
 # Local catalog only (D:/db). Not clone-required; MATLAB runs on datasets/ TIFFs.
-[submodule "external/neurovasc-db"]
-	path = external/neurovasc-db
+# Upstream GitHub repository: https://github.com/guitarbeat/phd-database
+[submodule "external/phd-database"]
+	path = external/phd-database
 	url = D:/db

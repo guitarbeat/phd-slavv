@@ -120,7 +120,7 @@ Phase 1 Network is green, optimize *without* silent parity regression:
 
 ## Phase 3 — Breadth & productization (later)
 
-- **More volumes:** `neurovasc-db` import and verify now that Phase 1 is closed.
+- **More volumes:** `phd-database` (`guitarbeat/phd-database`) import and verify now that Phase 1 is closed.
 - **Innovation path:** improvements beyond strict parity on the maintained
   Python route.
 - **Productization:** packaging and broader CLI / Streamlit UX polish.

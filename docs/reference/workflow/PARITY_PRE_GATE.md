@@ -28,7 +28,7 @@ Check [EXACT_PROOF_FINDINGS.md](../core/EXACT_PROOF_FINDINGS.md) before Tier 3 p
 
 ## Tier 1 — Synthetic fixture (CI smoke)
 
-**Goal:** Fast regression that the pipeline runs on non-trivial topology without neurovasc-db or MATLAB.
+**Goal:** Fast regression that the pipeline runs on non-trivial topology without phd-database or MATLAB.
 
 - Extend `slavv_python/utils/synthetic.py` with at least one richer geometry (e.g. Y-junction or crossing tubes) in addition to the straight tube.
 - **CI entry points:** `tests/integration/test_paper_profile_ci.py` (paper profile) and `tests/integration/parity/test_parity_pre_gate_tier1.py` (matlab_compat edges smoke + watershed LUT seam).

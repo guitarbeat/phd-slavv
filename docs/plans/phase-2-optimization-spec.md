@@ -37,7 +37,7 @@ baseline** is recorded in
 [phase2-profiling-baseline.json](../reference/core/phase2-profiling-baseline.json).
 Measured wall-clock on that dest shows **Edges stage at 5,534.0 s (~92.2 min)** as the primary runtime bottleneck, followed by Network at 416.0 s (~6.9 min); Energy/Vertices elapsed
 0 means carried lineage, not instant compute. Do **not** implement the Great
-Transpose, C-order unwind, paper-profile writer, or neurovasc-db writers from
+Transpose, C-order unwind, paper-profile writer, or phd-database writers from
 this spec until an explicit Phase 2 ADR names the regression gate.
 Paper-profile volume and oracle remain TBD. Stretch Energy (extra identical-bits
 bar; crop leftover last-digit diffs) is a separate program and is not this

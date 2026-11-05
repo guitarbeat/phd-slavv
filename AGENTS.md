@@ -188,7 +188,7 @@ _Avoid_: Overwriting the live claim dest; promoting a diagnostic successor to cl
 
 ### Experiment Root
 The on-disk home of [Oracles](#oracle), datasets, the live [Claim Run Root](#claim-run-root), crop-guard and stretch dests, and archived proofs under `workspace/`. GitHub carries package code and the Vectorization-Public submodule. Experiment Root binaries stay local or copy by USB/rsync (not GitHub LFS). `workspace/scratch/` is gitignored. Completeness: `slavv parity inspect-experiment-root` (rejects Git LFS pointer stubs).
-_Avoid_: Treating scratch probes as the Experiment Root; pushing Experiment Root binaries to GitHub LFS; dual-writing a second Candidate Set file into git; treating MATLAB Vectorization-Public or neurovasc-db as Experiment Root; equating freeze JSON `do_not_overwrite` with `PROTECTED_DEST_NAMES`.
+_Avoid_: Treating scratch probes as the Experiment Root; pushing Experiment Root binaries to GitHub LFS; dual-writing a second Candidate Set file into git; treating MATLAB Vectorization-Public or phd-database as Experiment Root; equating freeze JSON `do_not_overwrite` with `PROTECTED_DEST_NAMES`.
 
 ### Certification
 The state in which every required [Pipeline](#pipeline) stage passes its defined parity bar on a defined volume and workflow: Energy and Vertices use strict discrete equality plus `np.allclose` on continuous floats ([ADR 0011](docs/adr/0011-energy-float-certification-policy.md)); Edges and Network use the spatial bars in [ADR 0012](docs/adr/0012-edge-watershed-parity-bar.md) (ownership-map, trace tolerance, strand/bifurcation multisets)—not exact watershed edge-pair or strand-order equality. Phase 1 standing is Certification on the [Claim Run Root](#claim-run-root), not the audit/E-series portfolio.
@@ -358,7 +358,7 @@ slavv2python/
 │
 ├── external/                           # Vendored dependencies
 │   ├── Vectorization-Public/           # Canonical MATLAB source (GitHub submodule)
-│   └── neurovasc-db/                   # Local catalog only (`D:/db`; not clone-required)
+│   └── phd-database/                   # Local catalog only (`D:/db`; GitHub guitarbeat/phd-database; not clone-required)
 │
 ├── scripts/                            # Developer probe scripts (not the public CLI)
 │   ├── edges/                          # Watershed / selection probes
@@ -411,7 +411,8 @@ uv sync                                # Core package only
 uv sync --extra app                    # With Streamlit app dependencies
 uv sync --extra app --extra workspace  # Full developer environment (recommended)
 
-# MATLAB source (clone-required). neurovasc-db stays a local D:/db catalog.
+# MATLAB source (clone-required). phd-database stays a local D:/db catalog
+# (GitHub guitarbeat/phd-database; not clone-required).
 git submodule update --init -- external/Vectorization-Public
 
 # Install pre-commit hooks
@@ -634,7 +635,7 @@ For any MATLAB-parity-sensitive surface (especially `edges` and `network` stages
 ## Learned Workspace Facts
 
 - On this Mac, MATLAB R2024b for oracle generation is at `/Volumes/LoveSSD/Applications/MATLAB_R2024b.app/bin/matlab`.
-- Canonical full `180709_E` TIFF path used here: `/Volumes/LoveSSD/neurovasc-db/data/raw/scans/180709_E.tif`.
+- Canonical full `180709_E` TIFF path used here: `/Volumes/LoveSSD/NeuroVASC/repos/phd-database/data/raw/scans/180709_E.tif`.
 - Mac R2024b parity naming: oracle ids `180709_E_crop_M_r2024b` / `180709_E_full_r2024b`; run dests `crop_M_r2024b` / `canonical_full_r2024b`.
 - R2024b MATLAB Energy on this 8 GB host has segfaulted in FFT (`libmwmfl_fft`); stable recovery uses serialized `maxNumCompThreads(1)`.
 - Mac R2024b oracle/proof work is a local parity lineage distinct from the frozen Windows claim roots until both crop and full evaluated prove-exact pass and an explicit decision updates the official record.

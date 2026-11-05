@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pause-safe sequential parity/baseline batch for hydrated neurovasc-db TIFFs.
+"""Pause-safe sequential parity/baseline batch for hydrated phd-database TIFFs.
 
 Examples (run from the repository root)::
 
@@ -36,7 +36,7 @@ if TYPE_CHECKING:
     from collections.abc import Iterator
 
 REPO = Path(__file__).resolve().parents[2]
-DB_ROOT = Path(os.environ.get("NEUROVASC_DB_ROOT", "/Volumes/LoveSSD/NeuroVASC/repos/neurovasc-db"))
+DB_ROOT = Path(os.environ.get("NEUROVASC_DB_ROOT", "/Volumes/LoveSSD/NeuroVASC/repos/phd-database"))
 CATALOG = DB_ROOT / "data/metadata/neurovasc_catalog.sqlite"
 BATCH_ROOT = REPO / "workspace/scratch/overnight_parity_batch"
 MANIFEST = BATCH_ROOT / "batch_manifest.json"
