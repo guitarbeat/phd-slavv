@@ -11,7 +11,7 @@ Author and expand the definitive guide on porting an untyped, implicitly-broadca
 
 - Append, refine, and structure the paper located at `docs/investigations/MATLAB_PYTHON_TRANSLATION_PAPER.md`.
 - Group lessons by architectural themes rather than chronological sequence.
-- Include concrete examples from the `slavv2python` codebase (e.g., how MATLAB's `find(..., 'last')` mapping impacted parity, the switch from `np.isclose` to exact bitwise equality for precision, or the differences between MATLAB's `linspace` and Python's `np.arange`).
+- Include concrete examples from the `phd-slavv` codebase (e.g., how MATLAB's `find(..., 'last')` mapping impacted parity, the switch from `np.isclose` to exact bitwise equality for precision, or the differences between MATLAB's `linspace` and Python's `np.arange`).
 - Always cite verified fixes and completed Parity Runs as the soil for the paper.
 
 ## Paper Structure

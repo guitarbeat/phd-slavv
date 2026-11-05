@@ -2,7 +2,7 @@
   "checks": {
     "dataset_hash": "0cdf88e930482e9eb818963da22846c43b53b531582bf3aed83678b549863d06",
     "dest_exists": true,
-    "dest_run_root": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b",
+    "dest_run_root": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b",
     "experiment_provenance": {
       "dataset_hash": "0cdf88e930482e9eb818963da22846c43b53b531582bf3aed83678b549863d06",
       "oracle_id": "180709_E_crop_M_r2024b",

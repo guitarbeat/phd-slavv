@@ -1,5 +1,5 @@
 {
-  "dest_run_root": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1",
+  "dest_run_root": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1",
   "edges_adr0012_gate": {
     "adr0012_evaluated": false,
     "adr0012_unavailable_reason": "MATLAB watershed ownership map unavailable \u2014 expected <matlab_batch_dir>/data/watershed_ownership_map.mat",
@@ -17,11 +17,11 @@
     "python_preview": "ADR 0012 spatial bars were not evaluated because ownership-map artifacts are missing or incompatible. This is not a spatial-bar failure and strict-field connection counts are informational only. Reason: MATLAB watershed ownership map unavailable \u2014 expected <matlab_batch_dir>/data/watershed_ownership_map.mat",
     "stage": "edges"
   },
-  "matlab_batch_dir": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/oracles/180709_E_full_r2024b/01_Input/matlab_results/batch_260907-001109",
-  "mismatch_diagnosis": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Analysis/exact_mismatch_edges.json",
+  "matlab_batch_dir": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/oracles/180709_E_full_r2024b/01_Input/matlab_results/batch_260907-001109",
+  "mismatch_diagnosis": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Analysis/exact_mismatch_edges.json",
   "passed": false,
   "report_scope": "exact route",
-  "source_run_root": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1",
+  "source_run_root": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1",
   "stage_summaries": {
     "edges": {
       "field_count": 9,

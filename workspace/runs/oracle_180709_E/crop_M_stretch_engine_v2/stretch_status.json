@@ -2,7 +2,7 @@
   "extra": {
     "allclose_is_not_stretch_success": true,
     "backend": "matlab_engine",
-    "dest_run_root": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_stretch_engine_v2",
+    "dest_run_root": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_stretch_engine_v2",
     "e12": {
       "finite_bit_identical": 57,
       "finite_total": 57,
@@ -83,7 +83,7 @@
       "isolation_only": true,
       "local_ranges_equal": true,
       "not_stretch_success": true,
-      "scratch_json": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\scratch\\stretch_helper_body_isolation.json",
+      "scratch_json": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\scratch\\stretch_helper_body_isolation.json",
       "status_class": "blocked_float_path",
       "stretch_complete": false
     },
@@ -140,7 +140,7 @@
       },
       "params_core_equal": true,
       "params_equal": false,
-      "scratch_json": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\scratch\\stretch_lattice_params_isolation.json",
+      "scratch_json": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\scratch\\stretch_lattice_params_isolation.json",
       "status_class": "blocked_float_path",
       "stretch_complete": false
     },
@@ -150,7 +150,7 @@
       "isolation_only": true,
       "lattice": {
         "chunk_index": 0,
-        "dest": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_stretch_engine_v2",
+        "dest": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_stretch_engine_v2",
         "lattice_dimensions_yxz": [
           5,
           5,
@@ -163,7 +163,7 @@
         ],
         "number_of_chunks": 75,
         "octave": 2,
-        "oracle_root": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\oracles\\180709_E_crop_M_v2",
+        "oracle_root": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\oracles\\180709_E_crop_M_v2",
         "prev_scales_count": 36,
         "rf_zyx": [
           1,
@@ -223,7 +223,7 @@
       },
       "not_stretch_success": true,
       "result": "ok",
-      "scratch_json": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\scratch\\stretch_one_production_chunk.json",
+      "scratch_json": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\scratch\\stretch_one_production_chunk.json",
       "status_class": "blocked_float_path",
       "stretch_complete": false
     },
@@ -236,7 +236,7 @@
     "synthetic_original_compare": {
       "allclose_is_not_stretch_success": true,
       "clamp_class_mismatches": 0,
-      "dest": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\scratch\\stretch_synthetic_original_8",
+      "dest": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\scratch\\stretch_synthetic_original_8",
       "failed_voxels": 0,
       "interpretation": "Tiny synthetic helper vs original get_energy_V202 bit-matched. That does not unlock crop Energy; crop remains blocked_float_path.",
       "isolation_only": true,

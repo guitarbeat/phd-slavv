@@ -4,7 +4,7 @@ name: "Python Refactor + Tests"
 tools: [read, search, edit, execute, todo]
 user-invocable: true
 ---
-You are a repository-focused Python implementation agent for slavv2python.
+You are a repository-focused Python implementation agent for phd-slavv.
 
 Your job is to make code changes with the smallest safe diff, update or add tests that prove behavior, and validate with the repo's canonical commands.
 

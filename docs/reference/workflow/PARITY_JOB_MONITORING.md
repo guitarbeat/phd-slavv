@@ -98,7 +98,7 @@ Use `scripts/parity/macos_matlab_job.py` for a long MATLAB process that must
 survive terminal or Codex desktop restarts. The installed LaunchAgent starts a
 local stdlib-only supervisor, then opens MATLAB through LaunchServices. Runtime
 state, logs, the pause sentinel, MATLAB PID, and the attempt-nonce result marker
-live under `~/Library/Application Support/slavv2python/matlab-jobs/`; source and
+live under `~/Library/Application Support/phd-slavv/matlab-jobs/`; source and
 experiment outputs can remain on an external volume.
 
 `pause` writes the sentinel, verifies the exact MATLAB command identity,

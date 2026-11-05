@@ -1,5 +1,5 @@
 {
-  "dest_run_root": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1",
+  "dest_run_root": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1",
   "energy_float_gate": {
     "atol": 1e-09,
     "denorm_threshold": 0.001,
@@ -43,10 +43,10 @@
   "first_failing_field_path": null,
   "first_failing_stage": null,
   "first_failure": null,
-  "matlab_batch_dir": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/oracles/180709_E_full_r2024b/01_Input/matlab_results/batch_260907-001109",
+  "matlab_batch_dir": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/oracles/180709_E_full_r2024b/01_Input/matlab_results/batch_260907-001109",
   "passed": true,
   "report_scope": "exact route",
-  "source_run_root": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1",
+  "source_run_root": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1",
   "stage_summaries": {
     "energy": {
       "field_count": 4,

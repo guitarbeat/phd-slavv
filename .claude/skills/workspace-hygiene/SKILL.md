@@ -1,6 +1,6 @@
 ---
 name: workspace-hygiene
-description: Keep the slavv2python repository workspace clean and organized. Use when the user asks to clean the worktree, remove dirty files, tidy the workspace, organize scratch artifacts, prevent root-level junk, or capture/apply workspace hygiene rules.
+description: Keep the phd-slavv repository workspace clean and organized. Use when the user asks to clean the worktree, remove dirty files, tidy the workspace, organize scratch artifacts, prevent root-level junk, or capture/apply workspace hygiene rules.
 ---
 
 # Workspace Hygiene

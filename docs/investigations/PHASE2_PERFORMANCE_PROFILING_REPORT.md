@@ -44,7 +44,7 @@ With the verified completion of `canonical_full_r2024b_v1`, we now have **comple
 ## 3. Sub-Stage Disaggregation
 
 ### 3.1 Edges Stage Breakdown (Discovery vs Selection)
-Using durable timing instrumentation ([`slavv_python/analytics/performance/edge_timing.py`](file:///Volumes/LoveSSD/NeuroVASC/repos/slavv2python/slavv_python/analytics/performance/edge_timing.py)), we separated Watershed Candidate Discovery from Candidate Selection & Finalization:
+Using durable timing instrumentation ([`slavv_python/analytics/performance/edge_timing.py`](file:///Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/slavv_python/analytics/performance/edge_timing.py)), we separated Watershed Candidate Discovery from Candidate Selection & Finalization:
 
 ```mermaid
 graph LR
@@ -56,11 +56,11 @@ graph LR
 ```
 
 - **Watershed Discovery:** **$748.77\text{ s}$ ($98.01\%$)** — The absolute bottleneck of the Edges stage.
-- **Edge Selection & Finalization:** **$15.21\text{ s}$ ($1.99\%$)** — Highly efficient vectorized conflict resolution and Claimed Trace Energy bake ([ADR 0013](file:///Volumes/LoveSSD/NeuroVASC/repos/slavv2python/docs/adr/0013-claimed-energy-trace-provenance.md)).
+- **Edge Selection & Finalization:** **$15.21\text{ s}$ ($1.99\%$)** — Highly efficient vectorized conflict resolution and Claimed Trace Energy bake ([ADR 0013](file:///Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/docs/adr/0013-claimed-energy-trace-provenance.md)).
 - **Initialization:** **$0.001\text{ s}$ ($<0.01\%$)**.
 
 ### 3.2 Network Stage Breakdown
-Extracted from [`canonical_full_r2024b_v1/05_Network/phase2_network_split.json`](file:///Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/phase2_network_split.json):
+Extracted from [`canonical_full_r2024b_v1/05_Network/phase2_network_split.json`](file:///Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/phase2_network_split.json):
 
 ```mermaid
 graph LR
@@ -83,7 +83,7 @@ graph LR
 
 To understand why Watershed Discovery consumes 98% of the Edges stage, we executed a full `cProfile` analysis on the crop harness dataset (`crop_M_r2024b`, 13,706 vertices, 19,225 candidates). 
 
-Full profile stats are logged in [`workspace/reports/phase2_profiling/edges_detailed_profile.json`](file:///Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/reports/phase2_profiling/edges_detailed_profile.json).
+Full profile stats are logged in [`workspace/reports/phase2_profiling/edges_detailed_profile.json`](file:///Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/reports/phase2_profiling/edges_detailed_profile.json).
 
 ### 4.1 Top Function Spans in Watershed Discovery
 
@@ -155,7 +155,7 @@ Following the profiling analysis, we implemented two high-priority optimizations
 
 #### Benchmark Results on Canonical Full Volume (`180709_E`, 16.8M voxels, 59,408 vertices)
 
-Extracted from [`workspace/reports/phase2_profiling/full_volume_edges_benchmark.json`](file:///Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/reports/phase2_profiling/full_volume_edges_benchmark.json):
+Extracted from [`workspace/reports/phase2_profiling/full_volume_edges_benchmark.json`](file:///Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/reports/phase2_profiling/full_volume_edges_benchmark.json):
 
 | Sub-Stage | Historical Windows (`v18`) | Initial macOS (`r2024b_v1`) | Phase 2 Optimized macOS | Total Speedup Factor |
 | :--- | :--- | :--- | :--- | :--- |
@@ -203,12 +203,12 @@ The Energy stage consumed 91.3% of pipeline runtime ($9,342.1\text{ s}$). Under 
 
 ## 7. Verification & Reproducibility
 
-- **Edges Profiling Source Code:** [`scripts/profiling/profile_edges_detailed.py`](file:///Volumes/LoveSSD/NeuroVASC/repos/slavv2python/scripts/profiling/profile_edges_detailed.py)
-- **Edges Full Volume Benchmark Script:** [`scripts/profiling/benchmark_full_edges.py`](file:///Volumes/LoveSSD/NeuroVASC/repos/slavv2python/scripts/profiling/benchmark_full_edges.py)
-- **Energy FFT Benchmark Script:** [`scripts/profiling/benchmark_energy_fft.py`](file:///Volumes/LoveSSD/NeuroVASC/repos/slavv2python/scripts/profiling/benchmark_energy_fft.py)
+- **Edges Profiling Source Code:** [`scripts/profiling/profile_edges_detailed.py`](file:///Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/scripts/profiling/profile_edges_detailed.py)
+- **Edges Full Volume Benchmark Script:** [`scripts/profiling/benchmark_full_edges.py`](file:///Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/scripts/profiling/benchmark_full_edges.py)
+- **Energy FFT Benchmark Script:** [`scripts/profiling/benchmark_energy_fft.py`](file:///Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/scripts/profiling/benchmark_energy_fft.py)
 - **Raw Profiling Dumps:**
-  - Crop Profiling Summary: [`workspace/reports/phase2_profiling/edges_detailed_profile.json`](file:///Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/reports/phase2_profiling/edges_detailed_profile.json)
-  - Full Volume Benchmark Summary: [`workspace/reports/phase2_profiling/full_volume_edges_benchmark.json`](file:///Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/reports/phase2_profiling/full_volume_edges_benchmark.json)
+  - Crop Profiling Summary: [`workspace/reports/phase2_profiling/edges_detailed_profile.json`](file:///Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/reports/phase2_profiling/edges_detailed_profile.json)
+  - Full Volume Benchmark Summary: [`workspace/reports/phase2_profiling/full_volume_edges_benchmark.json`](file:///Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/reports/phase2_profiling/full_volume_edges_benchmark.json)
 - **Reproduce anytime via:**
   ```bash
   # Crop Harness detailed Edges profiling

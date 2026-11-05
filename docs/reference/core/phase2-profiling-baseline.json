@@ -8,7 +8,7 @@
     "vertices": 1545138
   },
   "claim_run_root": "workspace/runs/oracle_180709_E/canonical_full_v18",
-  "dest_resolved": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\canonical_full_v18",
+  "dest_resolved": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\canonical_full_v18",
   "do_not_overwrite": [
     "canonical_full_v18",
     "crop_M_exact_v3",

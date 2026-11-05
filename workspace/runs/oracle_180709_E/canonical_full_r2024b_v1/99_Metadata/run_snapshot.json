@@ -1,23 +1,23 @@
 {
   "artifacts": {
-    "edges.candidate_audit.json": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/candidate_audit.json",
-    "edges.candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/candidates.pkl",
-    "edges.checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_edges.pkl",
-    "edges.chosen_edges.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/chosen_edges.pkl",
-    "edges.phase2_edges_split.json": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/phase2_edges_split.json",
-    "edges.phase2_edges_split.json.sha256": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/phase2_edges_split.json.sha256",
-    "energy.best_energy.npy": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Energy/best_energy.npy",
-    "energy.best_scale.npy": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Energy/best_scale.npy",
-    "energy.checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_energy.pkl",
-    "network.adjacency.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/adjacency.pkl",
-    "network.checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_network.pkl",
-    "network.phase2_network_split.json": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/phase2_network_split.json",
-    "network.strands.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/strands.pkl",
+    "edges.candidate_audit.json": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/candidate_audit.json",
+    "edges.candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/candidates.pkl",
+    "edges.checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_edges.pkl",
+    "edges.chosen_edges.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/chosen_edges.pkl",
+    "edges.phase2_edges_split.json": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/phase2_edges_split.json",
+    "edges.phase2_edges_split.json.sha256": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/phase2_edges_split.json.sha256",
+    "energy.best_energy.npy": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Energy/best_energy.npy",
+    "energy.best_scale.npy": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Energy/best_scale.npy",
+    "energy.checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_energy.pkl",
+    "network.adjacency.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/adjacency.pkl",
+    "network.checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_network.pkl",
+    "network.phase2_network_split.json": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/phase2_network_split.json",
+    "network.strands.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/strands.pkl",
     "preprocess_done": "true",
-    "vertices.candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/candidates.pkl",
-    "vertices.checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_vertices.pkl",
-    "vertices.chosen_mask.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/chosen_mask.pkl",
-    "vertices.cropped_candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/cropped_candidates.pkl"
+    "vertices.candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/candidates.pkl",
+    "vertices.checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_vertices.pkl",
+    "vertices.chosen_mask.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/chosen_mask.pkl",
+    "vertices.cropped_candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/cropped_candidates.pkl"
   },
   "created_at": "2026-09-08T04:32:12Z",
   "current_detail": "Run completed",
@@ -49,12 +49,12 @@
   "stages": {
     "edges": {
       "artifacts": {
-        "candidate_audit.json": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/candidate_audit.json",
-        "candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/candidates.pkl",
-        "checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_edges.pkl",
-        "chosen_edges.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/chosen_edges.pkl",
-        "phase2_edges_split.json": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/phase2_edges_split.json",
-        "phase2_edges_split.json.sha256": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/phase2_edges_split.json.sha256"
+        "candidate_audit.json": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/candidate_audit.json",
+        "candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/candidates.pkl",
+        "checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_edges.pkl",
+        "chosen_edges.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/chosen_edges.pkl",
+        "phase2_edges_split.json": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/phase2_edges_split.json",
+        "phase2_edges_split.json.sha256": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/phase2_edges_split.json.sha256"
       },
       "completed_at": "2026-10-26T08:47:27Z",
       "detail": "Edges ready",
@@ -73,9 +73,9 @@
     },
     "energy": {
       "artifacts": {
-        "best_energy.npy": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Energy/best_energy.npy",
-        "best_scale.npy": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Energy/best_scale.npy",
-        "checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_energy.pkl"
+        "best_energy.npy": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Energy/best_energy.npy",
+        "best_scale.npy": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Energy/best_scale.npy",
+        "checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_energy.pkl"
       },
       "completed_at": "2026-10-26T08:32:43Z",
       "detail": "Energy Field ready",
@@ -94,10 +94,10 @@
     },
     "network": {
       "artifacts": {
-        "adjacency.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/adjacency.pkl",
-        "checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_network.pkl",
-        "phase2_network_split.json": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/phase2_network_split.json",
-        "strands.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/strands.pkl"
+        "adjacency.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/adjacency.pkl",
+        "checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_network.pkl",
+        "phase2_network_split.json": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/phase2_network_split.json",
+        "strands.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/strands.pkl"
       },
       "completed_at": "2026-10-26T08:47:58Z",
       "detail": "Network ready",
@@ -133,10 +133,10 @@
     },
     "vertices": {
       "artifacts": {
-        "candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/candidates.pkl",
-        "checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_vertices.pkl",
-        "chosen_mask.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/chosen_mask.pkl",
-        "cropped_candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/cropped_candidates.pkl"
+        "candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/candidates.pkl",
+        "checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_vertices.pkl",
+        "chosen_mask.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/chosen_mask.pkl",
+        "cropped_candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/cropped_candidates.pkl"
       },
       "completed_at": "2026-10-26T08:34:30Z",
       "detail": "Vertices ready",

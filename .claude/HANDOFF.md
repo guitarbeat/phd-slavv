@@ -124,7 +124,7 @@ uv run python scripts/parity/macos_matlab_job.py resume
 ```
 
 Operational state is local under `~/Library/Application
-Support/slavv2python/matlab-jobs/180709-e-r2024b-full/` because launchd's system
+Support/phd-slavv/matlab-jobs/180709-e-r2024b-full/` because launchd's system
 Python may not be authorized to traverse LoveSSD. MATLAB itself writes the
 external experiment output. A valid terminal success requires
 `runtime/matlab_result.json` with an `attempt_nonce` matching `state.json`.

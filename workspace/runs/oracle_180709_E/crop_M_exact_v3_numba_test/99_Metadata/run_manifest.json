@@ -19,7 +19,7 @@
   "python_commit": "964da3866dd958154b3751c7641fac50ca9552e0",
   "retention": "disposable",
   "run_id": "3fce1055f30d",
-  "run_root": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact_v3_numba_test",
+  "run_root": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact_v3_numba_test",
   "stage_metrics": {
     "edges": {
       "completed_at": null,

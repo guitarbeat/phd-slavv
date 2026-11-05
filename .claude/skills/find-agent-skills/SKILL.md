@@ -34,7 +34,7 @@ python .agents\skills\find-agent-skills\scripts\suggest_skill_candidates.py --fo
 For each candidate skill, verify:
 
 - Trigger fit: the description matches the actual user request.
-- Scope fit: the skill works in `slavv2python` without fighting `AGENTS.md`.
+- Scope fit: the skill works in `phd-slavv` without fighting `AGENTS.md`.
 - Trust: local project skills are safest; known official sources are next; unknown packages require source review before install.
 - Blast radius: avoid skills that run remote code, alter credentials, or write outside the repo unless the user explicitly approves.
 - Freshness: for external claims, check current source docs or repository content before recommending.
@@ -63,7 +63,7 @@ When adapting external skills for this repo:
 
 1. Translate tool-specific commands into Codex-compatible workflows.
 2. Replace generic memory paths with repo-owned docs or `workspace/scratch`.
-3. Add `slavv2python` domain references: parity, oracles, stage results, run state, and testing guide.
+3. Add `phd-slavv` domain references: parity, oracles, stage results, run state, and testing guide.
 4. Keep the skill concise; move long examples into references only when needed.
 5. Validate with the skill creator validator.
 

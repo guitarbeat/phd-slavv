@@ -1,5 +1,5 @@
 {
-  "dest_run_root": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b",
+  "dest_run_root": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b",
   "edges_adr0012_gate": {
     "adr0012_evaluated": true,
     "adr_bar": "ADR 0012 spatial bars (ownership-map \u2265 60% + trace tolerance)",
@@ -19,10 +19,10 @@
   "first_failing_field_path": null,
   "first_failing_stage": null,
   "first_failure": null,
-  "matlab_batch_dir": "/Volumes/LoveSSD/slavv2python/workspace/oracles/180709_E_crop_M_r2024b/01_Input/matlab_results/batch_260831-023332",
+  "matlab_batch_dir": "/Volumes/LoveSSD/phd-slavv/workspace/oracles/180709_E_crop_M_r2024b/01_Input/matlab_results/batch_260831-023332",
   "passed": true,
   "report_scope": "exact route",
-  "source_run_root": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b",
+  "source_run_root": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b",
   "stage_summaries": {
     "edges": {
       "field_count": 9,

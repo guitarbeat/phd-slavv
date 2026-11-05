@@ -1,6 +1,6 @@
 # Skills Catalog
 
-Reusable agent skills for `slavv2python` (30 total). Each skill lives in
+Reusable agent skills for `phd-slavv` (30 total). Each skill lives in
 `<skill-name>/SKILL.md`. Invoke a skill by name; see individual `SKILL.md` files
 for arguments and detailed steps.
 
@@ -29,7 +29,7 @@ for arguments and detailed steps.
 | [`prove-parity`](prove-parity/SKILL.md) | Run a SLAVV exact-parity proof for one pipeline stage (energy/vertices/edges/network) against the MATLAB oracle and summarize per-field pass/fail. |
 | [`review-and-ship`](review-and-ship/SKILL.md) | Review the current branch for bugs, intent fit, and test coverage; run or write tests; commit focused work; open or update a PR. |
 | [`run-smoke-tests`](run-smoke-tests/SKILL.md) | Run Playwright smoke tests, debug failures, and verify fixes |
-| [`self-improving-agent`](self-improving-agent/SKILL.md) | Capture durable corrections, repeated workflow lessons, and agent-process improvements for slavv2python. |
+| [`self-improving-agent`](self-improving-agent/SKILL.md) | Capture durable corrections, repeated workflow lessons, and agent-process improvements for phd-slavv. |
 | [`solution-note-generator`](solution-note-generator/SKILL.md) | Promote verified fixes, parity discoveries, integration resolutions, and reusable runbooks into searchable docs/solutions notes. |
 | [`systematic-debugging`](systematic-debugging/SKILL.md) | Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes |
 | [`thermo-nuclear-code-quality-review`](thermo-nuclear-code-quality-review/SKILL.md) | Run an extremely strict maintainability review for abstraction quality, giant files, and spaghetti-condition growth. |
@@ -38,7 +38,7 @@ for arguments and detailed steps.
 | [`weekly-review`](weekly-review/SKILL.md) | Produce a weekly synthesis of authored commits with highlights by bugfix, tech debt, and net-new work |
 | [`what-did-i-get-done`](what-did-i-get-done/SKILL.md) | Summarize authored commits over a user-specified time period into a concise update |
 | [`workflow-from-chats`](workflow-from-chats/SKILL.md) | Extract durable working preferences from recent Cursor chats and convert them into skills, rules, or workflow docs. |
-| [`workspace-hygiene`](workspace-hygiene/SKILL.md) | Keep the slavv2python repository workspace clean and organized. |
+| [`workspace-hygiene`](workspace-hygiene/SKILL.md) | Keep the phd-slavv repository workspace clean and organized. |
 
 ---
 

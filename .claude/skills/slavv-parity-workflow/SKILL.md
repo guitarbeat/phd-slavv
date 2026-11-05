@@ -7,7 +7,7 @@ description: >-
 # SLAVV Parity Workflow Protocol
 
 ## Overview
-This skill defines the canonical operational workflow for executing and evaluating MATLAB-to-Python exact parity runs in `slavv2python`. It enforces the 3-tier verification sequence:
+This skill defines the canonical operational workflow for executing and evaluating MATLAB-to-Python exact parity runs in `phd-slavv`. It enforces the 3-tier verification sequence:
 1. **Preflight Safety Inspection** (Lock checks, memory, parameter fingerprints)
 2. **Cheap Parity Ladder Verification** (Unit tests -> crop harness -> full non-writer re-selection)
 3. **Exact Proof Inspection** (ADR 0011 Energy/Vertices & ADR 0012 Edges/Network spatial multiset gates with mandatory `--require-evaluated` enforcement)

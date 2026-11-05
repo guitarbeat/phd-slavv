@@ -1,7 +1,7 @@
 {
-  "dest_run_root": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b",
+  "dest_run_root": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b",
   "passed": true,
-  "source_run_root": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b",
+  "source_run_root": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b",
   "stages": [
     {
       "passed": true,

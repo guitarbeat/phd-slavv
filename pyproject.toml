@@ -107,8 +107,8 @@ all = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/UTFOIL/slavv2python"
-Repository = "https://github.com/UTFOIL/slavv2python"
+Homepage = "https://github.com/UTFOIL/phd-slavv"
+Repository = "https://github.com/UTFOIL/phd-slavv"
 
 [project.scripts]
 slavv-app = "slavv_python.interface.streamlit.launcher:main"

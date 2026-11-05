@@ -16,7 +16,7 @@ def _config(tmp_path: Path, command: list[str]) -> dict[str, object]:
     return {
         "schema_version": 1,
         "job_id": "test-job",
-        "label": "org.utfoil.slavv2python.matlab.test-job",
+        "label": "org.utfoil.phd-slavv.matlab.test-job",
         "command": command,
         "cwd": str(tmp_path),
         "state_path": str(tmp_path / "state.json"),

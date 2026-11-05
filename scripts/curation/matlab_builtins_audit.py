@@ -235,7 +235,7 @@ def generate_specification_documents(audits: dict[str, SubsystemAudit], out_dir:
 - **Primary Function:** `{ws.primary_name}`
 - **Symbol:** `{ws.primary_symbol}`
 - **Instructions Decoded:** {ws.instructions} | **Branches:** {ws.branches} | **Calls:** {ws.calls}
-- **Corresponding Python Implementation:** [`slavv_python.pipeline.edges.watershed`](file:///Volumes/LoveSSD/NeuroVASC/repos/slavv2python/slavv_python/pipeline/edges/watershed.py)
+- **Corresponding Python Implementation:** [`slavv_python.pipeline.edges.watershed`](file:///Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/slavv_python/pipeline/edges/watershed.py)
 
 ---
 
@@ -279,7 +279,7 @@ MATLAB's `watershed(A, conn)` executes **Meyer's Topological Watershed Algorithm
 - **Primary Function:** `{gd.primary_name}`
 - **Symbol:** `{gd.primary_symbol}`
 - **Instructions Decoded:** {gd.instructions} | **Branches:** {gd.branches} | **Calls:** {gd.calls}
-- **Corresponding Python Implementation:** [`slavv_python.pipeline.edges.distance`](file:///Volumes/LoveSSD/NeuroVASC/repos/slavv2python/slavv_python/pipeline/edges/distance.py)
+- **Corresponding Python Implementation:** [`slavv_python.pipeline.edges.distance`](file:///Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/slavv_python/pipeline/edges/distance.py)
 
 ---
 
@@ -315,7 +315,7 @@ MATLAB's `watershed(A, conn)` executes **Meyer's Topological Watershed Algorithm
 - **Primary Function:** `{mo.primary_name}`
 - **Symbol:** `{mo.primary_symbol}`
 - **Instructions Decoded:** {mo.instructions} | **Branches:** {mo.branches} | **Calls:** {mo.calls}
-- **Corresponding Python Implementation:** [`slavv_python.pipeline.preprocessing.construct_structuring_element`](file:///Volumes/LoveSSD/NeuroVASC/repos/slavv2python/slavv_python/pipeline/preprocessing/construct_structuring_element.py)
+- **Corresponding Python Implementation:** [`slavv_python.pipeline.preprocessing.construct_structuring_element`](file:///Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/slavv_python/pipeline/preprocessing/construct_structuring_element.py)
 
 ---
 
@@ -351,7 +351,7 @@ MATLAB's `watershed(A, conn)` executes **Meyer's Topological Watershed Algorithm
 - **Primary Function:** `{im.primary_name}`
 - **Symbol:** `{im.primary_symbol}`
 - **Instructions Decoded:** {im.instructions} | **Branches:** {im.branches} | **Calls:** {im.calls}
-- **Corresponding Python Implementation:** [`slavv_python.pipeline.energy.filter`](file:///Volumes/LoveSSD/NeuroVASC/repos/slavv2python/slavv_python/pipeline/energy/filter.py)
+- **Corresponding Python Implementation:** [`slavv_python.pipeline.energy.filter`](file:///Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/slavv_python/pipeline/energy/filter.py)
 
 ---
 

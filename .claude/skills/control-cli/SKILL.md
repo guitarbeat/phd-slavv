@@ -102,7 +102,7 @@ If the CLI needs richer terminal control, use `pty.fork()` or an existing PTY li
 
 ## SLAVV Run Ops
 
-Use this repo-specific loop when controlling long-running `slavv2python` pipeline or parity runs:
+Use this repo-specific loop when controlling long-running `phd-slavv` pipeline or parity runs:
 
 1. Read `docs/reference/core/EXACT_PROOF_FINDINGS.md` before touching active parity runs.
 2. If `workspace/scratch/crop_energy_rerun_latest.pid` exists, check whether that process is alive before starting another writer on `workspace/runs/oracle_180709_E/crop_M_exact_v3`.

@@ -14,10 +14,10 @@
     512
   ],
   "selected_settings_paths": {
-    "edges": "/Volumes/LoveSSD/slavv2python/workspace/oracles/180709_E_full_r2024b/01_Input/matlab_results/batch_260907-001109/settings/edges_260907-001109.mat",
-    "energy": "/Volumes/LoveSSD/slavv2python/workspace/oracles/180709_E_full_r2024b/01_Input/matlab_results/batch_260907-001109/settings/energy_260907-001109.mat",
-    "network": "/Volumes/LoveSSD/slavv2python/workspace/oracles/180709_E_full_r2024b/01_Input/matlab_results/batch_260907-001109/settings/network_260907-001109.mat",
-    "vertices": "/Volumes/LoveSSD/slavv2python/workspace/oracles/180709_E_full_r2024b/01_Input/matlab_results/batch_260907-001109/settings/vertices_260907-001109.mat"
+    "edges": "/Volumes/LoveSSD/phd-slavv/workspace/oracles/180709_E_full_r2024b/01_Input/matlab_results/batch_260907-001109/settings/edges_260907-001109.mat",
+    "energy": "/Volumes/LoveSSD/phd-slavv/workspace/oracles/180709_E_full_r2024b/01_Input/matlab_results/batch_260907-001109/settings/energy_260907-001109.mat",
+    "network": "/Volumes/LoveSSD/phd-slavv/workspace/oracles/180709_E_full_r2024b/01_Input/matlab_results/batch_260907-001109/settings/network_260907-001109.mat",
+    "vertices": "/Volumes/LoveSSD/phd-slavv/workspace/oracles/180709_E_full_r2024b/01_Input/matlab_results/batch_260907-001109/settings/vertices_260907-001109.mat"
   },
   "stop_after": "network"
 }

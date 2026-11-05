@@ -47,7 +47,7 @@ that the MATLAB driver completed successfully.
 installs a stdlib-only supervisor below:
 
 ```text
-~/Library/Application Support/slavv2python/matlab-jobs/<job-id>/
+~/Library/Application Support/phd-slavv/matlab-jobs/<job-id>/
 ├── config.json
 ├── macos_matlab_job.py
 ├── matlab_driver_wrapper.m

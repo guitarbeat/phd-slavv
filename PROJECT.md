@@ -79,7 +79,7 @@ This project executes an automated transpilation pipeline, structural/AST compar
 ---
 
 ## Code Layout
-- Target Workspace: `d:/2P_Data/Aaron/slavv2python/workspace/experiments/matlab2python_audit/`
+- Target Workspace: `d:/2P_Data/Aaron/phd-slavv/workspace/experiments/matlab2python_audit/`
   - `tools/`:
     - `transpile_m2py.py` (M1: Transpiler AST visitor & converter, <= 1000 lines)
     - `ast_differ.py` (M2: Structural AST extractor & comparison engine, <= 1000 lines)

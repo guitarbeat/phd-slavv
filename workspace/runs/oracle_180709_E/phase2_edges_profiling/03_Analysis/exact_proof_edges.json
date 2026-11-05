@@ -1,5 +1,5 @@
 {
-  "dest_run_root": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\canonical_full_v18",
+  "dest_run_root": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\canonical_full_v18",
   "edges_adr0012_gate": {
     "adr0012_evaluated": true,
     "adr_bar": "ADR 0012 spatial bars (ownership-map \u2265 60% + trace tolerance)",
@@ -19,10 +19,10 @@
   "first_failing_field_path": null,
   "first_failing_stage": null,
   "first_failure": null,
-  "matlab_batch_dir": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\oracles\\180709_E_full_v2\\01_Input\\matlab_results\\batch_260626-125646",
+  "matlab_batch_dir": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\oracles\\180709_E_full_v2\\01_Input\\matlab_results\\batch_260626-125646",
   "passed": true,
   "report_scope": "exact route",
-  "source_run_root": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\canonical_full_v18",
+  "source_run_root": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\canonical_full_v18",
   "stage_summaries": {
     "edges": {
       "field_count": 9,

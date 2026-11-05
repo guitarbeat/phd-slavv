@@ -19,7 +19,7 @@ for a future MATLAB version, a new machine, or another project.
 
 ---
 
-## ⚠️ Parity warning (read before using in slavv2python)
+## ⚠️ Parity warning (read before using in phd-slavv)
 
 This project's MATLAB→Python certification is built on the **R2019a** oracle.
 MATLAB floating-point results can differ subtly between releases, so generating
@@ -78,7 +78,7 @@ project-scoped server by copying [`mcp.example.json`](./mcp.example.json) to a
 `.mcp.json` at the repo root and editing the two paths. A project `.mcp.json` is
 picked up automatically by Claude Code for that repo.
 
-> In slavv2python, do **not** commit a live `.mcp.json` for this server while the
+> In phd-slavv, do **not** commit a live `.mcp.json` for this server while the
 > parity work is active — keep it disabled per the warning above.
 
 ---

@@ -1,6 +1,6 @@
 ---
 name: self-improving-agent
-description: Capture durable corrections, repeated workflow lessons, and agent-process improvements for slavv2python. Use when the user explicitly asks the agent to learn, remember, improve itself, adapt an external self-improvement skill, reflect on completed work, mine repeated corrections, or promote a reusable project workflow into AGENTS.md, docs, solutions, TODO, or .claude/skills.
+description: Capture durable corrections, repeated workflow lessons, and agent-process improvements for phd-slavv. Use when the user explicitly asks the agent to learn, remember, improve itself, adapt an external self-improvement skill, reflect on completed work, mine repeated corrections, or promote a reusable project workflow into AGENTS.md, docs, solutions, TODO, or .claude/skills.
 ---
 
 # Self Improving Agent

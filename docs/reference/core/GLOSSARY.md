@@ -2,7 +2,7 @@
 
 [Up: Documentation Index](../../README.md) · [AGENTS.md](../../../AGENTS.md) · [New engineer start here](NEW_ENGINEER_START_HERE.md)
 
-Maintain this reference for domain-specific and project-specific terms used throughout the `slavv2python` repository. This glossary consolidates all terms from both user-facing and AI agent contexts.
+Maintain this reference for domain-specific and project-specific terms used throughout the `phd-slavv` repository. This glossary consolidates all terms from both user-facing and AI agent contexts.
 
 > **New here?** Read [NEW_ENGINEER_START_HERE.md](NEW_ENGINEER_START_HERE.md) first for Paper Path vs Exact Route and a minimal term cheat sheet — then use this file or [AGENTS.md § Domain Glossary](../../../AGENTS.md#domain-glossary) for depth.
 
