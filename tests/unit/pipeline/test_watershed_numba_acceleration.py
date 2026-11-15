@@ -441,4 +441,3 @@ def test_sorted_frontier_bisect_stateful_equivalence():
 
             assert q._available == ref_list
             assert q._is_current_location_clear == ref_clear
-

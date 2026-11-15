@@ -19,7 +19,11 @@ if TYPE_CHECKING:
 _NATIVE_LIB: ctypes.CDLL | None = None
 try:
     _csrc_dir = Path(__file__).resolve().parent / "csrc"
-    for _lib_name in ("libprincipal_energy.dylib", "libprincipal_energy.so", "libprincipal_energy.dll"):
+    for _lib_name in (
+        "libprincipal_energy.dylib",
+        "libprincipal_energy.so",
+        "libprincipal_energy.dll",
+    ):
         _candidate = _csrc_dir / _lib_name
         if _candidate.is_file():
             _lib = ctypes.CDLL(str(_candidate))
@@ -52,7 +56,9 @@ def compute_principal_energy(
         return cast("np.ndarray", np.empty(0, dtype=dtype))
 
     # Fast-path: use C++20 analytical eigensystem kernel (8x speedup, 0 heap allocations)
-    if _NATIVE_LIB is not None and (dtype is np.float64 or dtype == np.float64 or dtype == "float64"):
+    if _NATIVE_LIB is not None and (
+        dtype is np.float64 or dtype == np.float64 or dtype == "float64"
+    ):
         energies = np.empty(num_voxels, dtype=np.float64)
         g_c = np.ascontiguousarray(gradients, dtype=np.float64)
         c_c = np.ascontiguousarray(curvatures, dtype=np.float64)
