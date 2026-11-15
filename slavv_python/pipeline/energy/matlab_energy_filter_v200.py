@@ -398,9 +398,9 @@ def _matched_hessian_intermediates(
             ).astype(np.float64, copy=False)
             * filtered_chunk_dft,
             overwrite_input=True,
-        )[: original_shape[0], : original_shape[1], : original_shape[2]][valid_voxels].astype(
-            dtype, copy=False
-        )
+        )[
+            : original_shape[0], : original_shape[1], : original_shape[2]
+        ][valid_voxels].astype(dtype, copy=False)
 
     grad_valid: np.ndarray = np.empty((num_valid, 3), dtype=dtype)
     for i in range(3):
@@ -410,9 +410,9 @@ def _matched_hessian_intermediates(
             ).astype(np.float64, copy=False)
             * filtered_chunk_dft,
             overwrite_input=True,
-        )[: original_shape[0], : original_shape[1], : original_shape[2]][valid_voxels].astype(
-            dtype, copy=False
-        )
+        )[
+            : original_shape[0], : original_shape[1], : original_shape[2]
+        ][valid_voxels].astype(dtype, copy=False)
 
     del filtered_chunk_dft
     gc.collect()
@@ -482,9 +482,9 @@ def _get_symmetric_partner_indices(
             return cached
 
         ny, nx, nz = shape_key
-        p_idx_y = (-np.arange(ny)) % ny
-        p_idx_x = (-np.arange(nx)) % nx
-        p_idx_z = (-np.arange(nz)) % nz
+        p_idx_y: np.ndarray = (-np.arange(ny)) % ny
+        p_idx_x: np.ndarray = (-np.arange(nx)) % nx
+        p_idx_z: np.ndarray = (-np.arange(nz)) % nz
 
         plin = (
             p_idx_y[:, None, None] + ny * p_idx_x[None, :, None] + ny * nx * p_idx_z[None, None, :]
@@ -558,12 +558,15 @@ def _pixel_frequency_meshes(
         return cached
 
     pixel_frequencies = [scipy.fft.fftfreq(length) for length in shape_key]
-    y_mesh, x_mesh, z_mesh = np.meshgrid(
-        pixel_frequencies[0],
-        pixel_frequencies[1],
-        pixel_frequencies[2],
-        indexing="ij",
-        sparse=True,
+    y_mesh, x_mesh, z_mesh = cast(
+        "tuple[np.ndarray, np.ndarray, np.ndarray]",
+        np.meshgrid(
+            pixel_frequencies[0],
+            pixel_frequencies[1],
+            pixel_frequencies[2],
+            indexing="ij",
+            sparse=True,
+        ),
     )
     res = (y_mesh, x_mesh, z_mesh)
     _PIXEL_FREQ_MESH_CACHE[shape_key] = res

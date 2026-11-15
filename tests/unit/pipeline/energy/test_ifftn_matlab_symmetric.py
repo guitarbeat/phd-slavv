@@ -65,7 +65,7 @@ def test_ifftn_matlab_symmetric_parity_across_shapes():
     test_shapes = [
         (16, 16, 16),
         (17, 19, 21),  # Odd dimensions
-        (32, 16, 8),   # Powers of two
+        (32, 16, 8),  # Powers of two
         (64, 48, 32),  # Anisotropic
     ]
 
