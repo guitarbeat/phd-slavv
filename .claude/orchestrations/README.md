@@ -1,6 +1,6 @@
 # Orchestrations
 
-Multi-agent coordination artifacts for complex, multi-phase work in slavv2python.
+Multi-agent coordination artifacts for complex, multi-phase work in phd-slavv.
 
 ## Overview
 

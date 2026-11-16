@@ -4,7 +4,7 @@
 
 Automate full-pipeline transpilation of MATLAB source code from `external/Vectorization-Public/` using `matlab2python` and execute an end-to-end structural, AST, and synthetic-input differential audit against `slavv_python/` to find overlooked logic, calculation discrepancies, and hidden edge cases.
 
-Working directory: d:/2P_Data/Aaron/slavv2python/workspace/experiments/matlab2python_audit
+Working directory: d:/2P_Data/Aaron/phd-slavv/workspace/experiments/matlab2python_audit
 Integrity mode: development
 
 ## Requirements

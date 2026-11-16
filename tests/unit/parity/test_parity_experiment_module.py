@@ -130,7 +130,7 @@ def test_load_proof_record_accepts_same_repo_relative_root_from_windows(tmp_path
     run_root = tmp_path / "workspace/runs/oracle_180709_E/canonical_full_v18"
     path = _write_proof(
         run_root,
-        Path(r"D:\2P_Data\Aaron\slavv2python\workspace\runs\oracle_180709_E\canonical_full_v18"),
+        Path(r"D:\2P_Data\Aaron\phd-slavv\workspace\runs\oracle_180709_E\canonical_full_v18"),
         evaluated=True,
     )
 

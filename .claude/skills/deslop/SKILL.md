@@ -1,22 +1,12 @@
 ---
 name: deslop
-description: Remove AI-generated code slop and clean up code style
+description: Remove generated code clutter from a requested diff while preserving
+  behavior; use deslop-prose for prose editing.
 ---
 
-# Remove AI code slop
 
-Check the diff against main and remove AI-generated slop introduced in the branch.
+# Deslop
 
-## Focus Areas
+Repository paths and commands are relative to the selected working repository. Read its AGENTS.md and the shared library guidance; load only the procedure that matches the task.
 
-- Extra comments that are unnecessary or inconsistent with local style
-- Defensive checks or try/catch blocks that are abnormal for trusted code paths
-- Casts to `any` used only to bypass type issues
-- Deeply nested code that should be simplified with early returns
-- Other patterns inconsistent with the file and surrounding codebase
-
-## Guardrails
-
-- Keep behavior unchanged unless fixing a clear bug.
-- Prefer minimal, focused edits over broad rewrites.
-- Keep the final summary concise (1-3 sentences).
+Review the requested diff and remove generated code clutter: redundant comments, unnecessary defensive code, casts that hide type errors, gratuitous helpers and style inconsistent with neighboring code. Preserve runtime behavior, meaningful checks, test coverage and unrelated edits. For prose cleanup use deslop-prose; in phd-dissertation preserve citations, LaTeX commands, terminology locks and scientific qualifications. Verify only the changed surface.

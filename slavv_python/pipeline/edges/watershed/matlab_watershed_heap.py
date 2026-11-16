@@ -367,6 +367,7 @@ class SortedFrontier:
             return
 
         next_loc_arr = np.asarray(locations, dtype=np.int64).reshape(-1)
+        tail: int | None
         if next_loc_arr.size == 0:
             if not self._is_current_location_clear:
                 tail = self._available.pop()
@@ -388,11 +389,7 @@ class SortedFrontier:
 
         if tail is not None:
             targets_present = sorted(
-                {
-                    int(x)
-                    for x in next_loc_arr
-                    if int(x) in self._location_counts and int(x) != tail
-                }
+                {int(x) for x in next_loc_arr if int(x) in self._location_counts and int(x) != tail}
             )
         else:
             targets_present = sorted(

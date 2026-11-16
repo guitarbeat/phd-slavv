@@ -2,7 +2,7 @@
 
 **For AI Agents:** This file is your primary navigation guide. Start with the [🧭 Work Decision Tree](#-work-decision-tree) below to find what to read.
 
-Canonical instructions, domain glossary, and architecture guidelines for any AI coding agent working in the `slavv2python` repository. This file is automatically loaded into the AI's context.
+Canonical instructions, domain glossary, and architecture guidelines for any AI coding agent working in the `phd-slavv` repository. This file is automatically loaded into the AI's context.
 
 **Quick Navigation:**
 - **[🧭 Work Decision Tree](#-work-decision-tree)** ⭐ — **START HERE:** Find what to read based on your task
@@ -280,7 +280,7 @@ _Avoid_: Treating a green random-component run as crop or canonical `prove-exact
 - **`scripts/`** — Developer probes (`edges/`, `stretch/`, `ladder/`, `monitor/`, `docs/`, `profiling/`) ([scripts/README.md](scripts/README.md))
 
 ```text
-slavv2python/
+phd-slavv/
 ├── slavv_python/                       # PRODUCTION PACKAGE (uv installable)
 │   ├── engine/                         # Pipeline orchestration & lifecycle
 │   │   └── state/                      # Run tracking, snapshots, resume

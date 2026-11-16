@@ -16,7 +16,7 @@ from slavv_python.interface.streamlit.state.curation import summarize_processing
 from slavv_python.interface.streamlit.state.dashboard import load_dashboard_context
 from slavv_python.interface.streamlit.state.workflow import STAGE_ORDER, summarize_workflow
 
-DASHBOARD_REPO_URL = "https://github.com/UTFOIL/slavv2python"
+DASHBOARD_REPO_URL = "https://github.com/UTFOIL/phd-slavv"
 DASHBOARD_DOCS_URL = f"{DASHBOARD_REPO_URL}/blob/main/docs/README.md"
 DASHBOARD_CURATION_URL = (
     f"{DASHBOARD_REPO_URL}/blob/main/docs/reference/workflow/MANUAL_CURATION_WORKFLOW.md"

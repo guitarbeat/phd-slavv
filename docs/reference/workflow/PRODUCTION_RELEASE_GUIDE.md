@@ -74,7 +74,7 @@ git tag -a v0.1.0 -m "Vascular vectorization engine stable beta"
 ### Standalone Installation
 Users can install the release directly from the repository:
 ```powershell
-uv pip install git+https://github.com/UTFOIL/slavv2python.git@v0.1.0
+uv pip install git+https://github.com/UTFOIL/phd-slavv.git@v0.1.0
 ```
 
 ### Research Deployment

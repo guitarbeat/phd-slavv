@@ -1,6 +1,6 @@
 {
   "//": "Project-scoped MCP config template for the official MATLAB MCP Server.",
-  "//requirements": "MATLAB R2021a or later. Do NOT use to generate the slavv2python parity oracle (must stay R2019a).",
+  "//requirements": "MATLAB R2021a or later. Do NOT use to generate the phd-slavv parity oracle (must stay R2019a).",
   "//usage": "Copy to a .mcp.json at the repo root, then edit the 'command' path and the --matlab-root value.",
   "mcpServers": {
     "matlab": {

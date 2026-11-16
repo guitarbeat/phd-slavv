@@ -1,11 +1,11 @@
 {
   "created_at": "2026-07-03T19:08:46Z",
-  "run_root": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact",
+  "run_root": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact",
   "source_artifacts": [
-    "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\99_Metadata\\run_snapshot.json",
-    "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\04_Edges\\candidate_audit.json",
-    "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\candidate_coverage.json",
-    "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\candidate_progress.jsonl"
+    "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\99_Metadata\\run_snapshot.json",
+    "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\04_Edges\\candidate_audit.json",
+    "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\candidate_coverage.json",
+    "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\candidate_progress.jsonl"
   ],
   "table_count": 7,
   "tables": [
@@ -50,8 +50,8 @@
         "timestamps.created_at",
         "timestamps.updated_at"
       ],
-      "csv_path": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\run_snapshot.csv",
-      "jsonl_path": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\run_snapshot.jsonl",
+      "csv_path": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\run_snapshot.csv",
+      "jsonl_path": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\run_snapshot.jsonl",
       "name": "run_snapshot",
       "row_count": 1
     },
@@ -65,8 +65,8 @@
         "stage_key",
         "status"
       ],
-      "csv_path": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\run_snapshot_stages.csv",
-      "jsonl_path": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\run_snapshot_stages.jsonl",
+      "csv_path": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\run_snapshot_stages.csv",
+      "jsonl_path": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\run_snapshot_stages.jsonl",
       "name": "run_snapshot_stages",
       "row_count": 1
     },
@@ -11373,8 +11373,8 @@
         "use_frontier_tracer",
         "vertex_count"
       ],
-      "csv_path": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_audit.csv",
-      "jsonl_path": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_audit.jsonl",
+      "csv_path": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_audit.csv",
+      "jsonl_path": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_audit.jsonl",
       "name": "candidate_audit",
       "row_count": 1
     },
@@ -11401,8 +11401,8 @@
         "watershed_endpoint_pair_count",
         "watershed_endpoint_pair_samples"
       ],
-      "csv_path": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_audit_per_origin.csv",
-      "jsonl_path": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_audit_per_origin.jsonl",
+      "csv_path": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_audit_per_origin.csv",
+      "jsonl_path": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_audit_per_origin.jsonl",
       "name": "candidate_audit_per_origin",
       "row_count": 11242
     },
@@ -11413,8 +11413,8 @@
         "metric_value",
         "origin_index"
       ],
-      "csv_path": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_audit_origin_metrics.csv",
-      "jsonl_path": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_audit_origin_metrics.jsonl",
+      "csv_path": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_audit_origin_metrics.csv",
+      "jsonl_path": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_audit_origin_metrics.jsonl",
       "name": "candidate_audit_origin_metrics",
       "row_count": 11242
     },
@@ -11438,8 +11438,8 @@
         "top_extra_vertices",
         "top_missing_vertices"
       ],
-      "csv_path": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_coverage_summary.csv",
-      "jsonl_path": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_coverage_summary.jsonl",
+      "csv_path": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_coverage_summary.csv",
+      "jsonl_path": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_coverage_summary.jsonl",
       "name": "candidate_coverage_summary",
       "row_count": 1
     },
@@ -11452,11 +11452,11 @@
         "phase",
         "timestamp"
       ],
-      "csv_path": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_progress.csv",
-      "jsonl_path": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_progress.jsonl",
+      "csv_path": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_progress.csv",
+      "jsonl_path": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables\\candidate_progress.jsonl",
       "name": "candidate_progress",
       "row_count": 165
     }
   ],
-  "tables_root": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables"
+  "tables_root": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact\\03_Analysis\\tables"
 }

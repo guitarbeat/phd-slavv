@@ -85,7 +85,7 @@ uv run python scripts\monitor\throughput.py --run-dir <run> --log <run-log> --to
 | [`macos_matlab_job.py`](parity/macos_matlab_job.py) | Install and control a launchd-owned, pause-safe MATLAB batch on macOS |
 
 The macOS supervisor stores operational state under `~/Library/Application
-Support/slavv2python/matlab-jobs/`. That local boundary is intentional:
+Support/phd-slavv/matlab-jobs/`. That local boundary is intentional:
 LaunchAgent Python may not have permission to traverse an external volume.
 MATLAB is opened through LaunchServices and writes a PID plus nonce-matched
 completion marker locally; experiment outputs remain under `workspace/scratch/`.

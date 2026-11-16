@@ -12,11 +12,11 @@
   "passed": false,
   "passed_voxels": 4157130,
   "provenance": {
-    "dest_run_root": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact",
-    "matlab_batch_dir": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\oracles\\180709_E_crop_M_v2\\01_Input\\matlab_results\\batch_260624-105705",
+    "dest_run_root": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact",
+    "matlab_batch_dir": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\oracles\\180709_E_crop_M_v2\\01_Input\\matlab_results\\batch_260624-105705",
     "oracle_id": "180709_E_crop_M_v2",
     "params_fingerprint": "995d5ab90d36928ec5fb4d86f07f2b42ea33dd23ae51ea8ddff94065f6ba2e85",
-    "source_run_root": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact"
+    "source_run_root": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact"
   },
   "scale_agree_energy_exact_match_count": 384178,
   "scale_agree_energy_ulp_over_max_count": 37174,

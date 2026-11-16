@@ -1,29 +1,18 @@
 ---
 name: fix-ci
-description: Find failing PR checks, inspect logs or external check links, and apply focused fixes
+description: Diagnose failing pull-request checks, apply focused fixes, and monitor
+  the check set when requested.
 ---
 
-# Fix CI
 
-## Trigger
+# Fix Ci
 
-Branch or PR CI is failing and needs a fast, iterative path to green checks.
+Repository paths and commands are relative to the selected working repository. Read its AGENTS.md and the shared library guidance; load only the procedure that matches the task.
 
-## Workflow
+Use `gh pr checks` for all PR-attached checks; `gh run list` covers only GitHub Actions. Inspect the first actionable failure and logs or the external check link, apply a focused fix, and run its local equivalent. Monitor pending checks in bounded waits; after an authorized push, refresh the full check set. Retry a suspected flake once with evidence. Do not bypass hooks or claim a pass from pending checks. Commit/push only within existing authorization. Read the detailed CI mode when log analysis needs it; upstream Streamlit build commands apply only inside streamlit/streamlit.
 
-1. Resolve the active PR and inspect `gh pr checks --json name,bucket,state,workflow,link`.
-2. Inspect failed jobs and extract the first actionable error. Use GitHub Actions logs when available; otherwise use the check link to identify the failing command or service.
-3. Apply the smallest safe fix.
-4. Push, re-check the PR check set, and repeat until green.
+## Select the relevant procedure
 
-## Guardrails
-
-- Fix one actionable failure at a time.
-- Prefer minimal, low-risk changes before broader refactors.
-- Keep `gh pr checks` as the source of truth for overall PR CI state.
-
-## Output
-
-- Primary failing job and root error
-- Fixes applied in iteration order
-- Current CI status and next action
+- [phd-research: fixing-streamlit-ci (general technique; repository-specific commands remain scoped)](references/modes/phd-research-fixing-streamlit-ci/workflow.md). Read only when this procedure matches the task.
+- [phd-slavv: fix-ci](references/modes/phd-slavv-fix-ci-agents/workflow.md). Read only when this procedure matches the task.
+- [phd-slavv: loop-on-ci](references/modes/phd-slavv-loop-on-ci-agents/workflow.md). Read only when this procedure matches the task.

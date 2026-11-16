@@ -30,7 +30,7 @@
 
 ## 3. Software & Repository Availability
 
-- **Repository:** `https://github.com/guitarbeat/slavv2python`
+- **Repository:** `https://github.com/guitarbeat/phd-slavv`
 - **Programming Language:** Python 3.10–3.13 (PyPI package: `slavv-python`)
 - **Core Dependencies:** `numpy`, `scipy`, `numba`, `joblib`, `tifffile`, `h5py`, `matplotlib`
 - **License:** MIT License

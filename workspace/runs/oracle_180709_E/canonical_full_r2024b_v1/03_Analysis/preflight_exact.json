@@ -2,7 +2,7 @@
   "checks": {
     "dataset_hash": "771eb62fd1322cf59e24f056aff2692b3375b94ce6dc9b25744428d4dbf1e353",
     "dest_exists": true,
-    "dest_run_root": "/Volumes/LoveSSD/NeuroVASC/repos/slavv2python/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1",
+    "dest_run_root": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1",
     "experiment_provenance": {
       "dataset_hash": "771eb62fd1322cf59e24f056aff2692b3375b94ce6dc9b25744428d4dbf1e353",
       "oracle_id": "180709_E_full_r2024b",

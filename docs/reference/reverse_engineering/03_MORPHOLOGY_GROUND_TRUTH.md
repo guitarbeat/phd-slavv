@@ -5,7 +5,7 @@
 - **Primary Function:** `is_linear_strel`
 - **Symbol:** `__Z15is_linear_strelPKhPKmmPmS3_Pl`
 - **Instructions Decoded:** 81 | **Branches:** 16 | **Calls:** 0
-- **Corresponding Python Implementation:** [`slavv_python.pipeline.preprocessing.construct_structuring_element`](file:///Volumes/LoveSSD/NeuroVASC/repos/slavv2python/slavv_python/pipeline/preprocessing/construct_structuring_element.py)
+- **Corresponding Python Implementation:** [`slavv_python.pipeline.preprocessing.construct_structuring_element`](file:///Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/slavv_python/pipeline/preprocessing/construct_structuring_element.py)
 
 ---
 

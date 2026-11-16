@@ -16,7 +16,7 @@ def _config(tmp_path: Path, command: list[str]) -> dict[str, object]:
     return {
         "schema_version": 1,
         "job_id": "test-job",
-        "label": "org.utfoil.slavv2python.matlab.test-job",
+        "label": "org.utfoil.phd-slavv.matlab.test-job",
         "command": command,
         "cwd": str(tmp_path),
         "state_path": str(tmp_path / "state.json"),
@@ -30,6 +30,7 @@ def _config(tmp_path: Path, command: list[str]) -> dict[str, object]:
     }
 
 
+@pytest.mark.skipif(sys.platform != "darwin", reason="macOS-only LaunchAgent")
 def test_install_materializes_local_supervisor_and_launchagent(monkeypatch, tmp_path):
     support = tmp_path / "Application Support"
     agents = tmp_path / "LaunchAgents"
@@ -108,6 +109,7 @@ def test_install_materializes_local_supervisor_and_launchagent(monkeypatch, tmp_
     assert config["wrapper_sha256"] == hashlib.sha256(wrapper.encode()).hexdigest()
 
 
+@pytest.mark.skipif(sys.platform != "darwin", reason="macOS-only LaunchAgent")
 def test_install_verifies_source_hash_before_bootstrap(monkeypatch, tmp_path):
     support = tmp_path / "Application Support"
     agents = tmp_path / "LaunchAgents"

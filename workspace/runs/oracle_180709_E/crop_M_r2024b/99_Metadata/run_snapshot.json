@@ -1,23 +1,23 @@
 {
   "artifacts": {
-    "edges.candidate_audit.json": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/candidate_audit.json",
-    "edges.candidates.pkl": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/candidates.pkl",
-    "edges.checkpoint": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Output/python_results/checkpoints/checkpoint_edges.pkl",
-    "edges.chosen_edges.pkl": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/chosen_edges.pkl",
-    "edges.phase2_edges_split.json": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/phase2_edges_split.json",
-    "edges.phase2_edges_split.json.sha256": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/phase2_edges_split.json.sha256",
-    "energy.best_energy.npy": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Energy/best_energy.npy",
-    "energy.best_scale.npy": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Energy/best_scale.npy",
-    "energy.checkpoint": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Output/python_results/checkpoints/checkpoint_energy.pkl",
-    "network.adjacency.pkl": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/05_Network/adjacency.pkl",
-    "network.checkpoint": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Output/python_results/checkpoints/checkpoint_network.pkl",
-    "network.phase2_network_split.json": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/05_Network/phase2_network_split.json",
-    "network.strands.pkl": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/05_Network/strands.pkl",
+    "edges.candidate_audit.json": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/candidate_audit.json",
+    "edges.candidates.pkl": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/candidates.pkl",
+    "edges.checkpoint": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Output/python_results/checkpoints/checkpoint_edges.pkl",
+    "edges.chosen_edges.pkl": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/chosen_edges.pkl",
+    "edges.phase2_edges_split.json": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/phase2_edges_split.json",
+    "edges.phase2_edges_split.json.sha256": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/phase2_edges_split.json.sha256",
+    "energy.best_energy.npy": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Energy/best_energy.npy",
+    "energy.best_scale.npy": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Energy/best_scale.npy",
+    "energy.checkpoint": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Output/python_results/checkpoints/checkpoint_energy.pkl",
+    "network.adjacency.pkl": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/05_Network/adjacency.pkl",
+    "network.checkpoint": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Output/python_results/checkpoints/checkpoint_network.pkl",
+    "network.phase2_network_split.json": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/05_Network/phase2_network_split.json",
+    "network.strands.pkl": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/05_Network/strands.pkl",
     "preprocess_done": "true",
-    "vertices.candidates.pkl": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/03_Vertices/candidates.pkl",
-    "vertices.checkpoint": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Output/python_results/checkpoints/checkpoint_vertices.pkl",
-    "vertices.chosen_mask.pkl": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/03_Vertices/chosen_mask.pkl",
-    "vertices.cropped_candidates.pkl": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/03_Vertices/cropped_candidates.pkl"
+    "vertices.candidates.pkl": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/03_Vertices/candidates.pkl",
+    "vertices.checkpoint": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Output/python_results/checkpoints/checkpoint_vertices.pkl",
+    "vertices.chosen_mask.pkl": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/03_Vertices/chosen_mask.pkl",
+    "vertices.cropped_candidates.pkl": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/03_Vertices/cropped_candidates.pkl"
   },
   "created_at": "2026-09-05T17:41:55Z",
   "current_detail": "Run completed",
@@ -36,7 +36,7 @@
       256,
       256
     ],
-    "input_file": "/Volumes/LoveSSD/slavv2python/workspace/datasets/0cdf88e930482e9eb818963da22846c43b53b531582bf3aed83678b549863d06/01_Input/180709_E_crop_M.tif",
+    "input_file": "/Volumes/LoveSSD/phd-slavv/workspace/datasets/0cdf88e930482e9eb818963da22846c43b53b531582bf3aed83678b549863d06/01_Input/180709_E_crop_M.tif",
     "layout": "structured",
     "oracle_id": "180709_E_crop_M_r2024b",
     "slavv_python": "pipeline",
@@ -46,12 +46,12 @@
   "stages": {
     "edges": {
       "artifacts": {
-        "candidate_audit.json": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/candidate_audit.json",
-        "candidates.pkl": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/candidates.pkl",
-        "checkpoint": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Output/python_results/checkpoints/checkpoint_edges.pkl",
-        "chosen_edges.pkl": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/chosen_edges.pkl",
-        "phase2_edges_split.json": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/phase2_edges_split.json",
-        "phase2_edges_split.json.sha256": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/phase2_edges_split.json.sha256"
+        "candidate_audit.json": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/candidate_audit.json",
+        "candidates.pkl": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/candidates.pkl",
+        "checkpoint": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Output/python_results/checkpoints/checkpoint_edges.pkl",
+        "chosen_edges.pkl": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/chosen_edges.pkl",
+        "phase2_edges_split.json": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/phase2_edges_split.json",
+        "phase2_edges_split.json.sha256": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/04_Edges/phase2_edges_split.json.sha256"
       },
       "completed_at": "2026-09-05T21:45:46Z",
       "detail": "Edges ready",
@@ -70,9 +70,9 @@
     },
     "energy": {
       "artifacts": {
-        "best_energy.npy": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Energy/best_energy.npy",
-        "best_scale.npy": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Energy/best_scale.npy",
-        "checkpoint": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Output/python_results/checkpoints/checkpoint_energy.pkl"
+        "best_energy.npy": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Energy/best_energy.npy",
+        "best_scale.npy": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Energy/best_scale.npy",
+        "checkpoint": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Output/python_results/checkpoints/checkpoint_energy.pkl"
       },
       "completed_at": "2026-09-05T21:44:27Z",
       "detail": "Energy Field ready",
@@ -91,10 +91,10 @@
     },
     "network": {
       "artifacts": {
-        "adjacency.pkl": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/05_Network/adjacency.pkl",
-        "checkpoint": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Output/python_results/checkpoints/checkpoint_network.pkl",
-        "phase2_network_split.json": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/05_Network/phase2_network_split.json",
-        "strands.pkl": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/05_Network/strands.pkl"
+        "adjacency.pkl": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/05_Network/adjacency.pkl",
+        "checkpoint": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Output/python_results/checkpoints/checkpoint_network.pkl",
+        "phase2_network_split.json": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/05_Network/phase2_network_split.json",
+        "strands.pkl": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/05_Network/strands.pkl"
       },
       "completed_at": "2026-09-05T21:45:55Z",
       "detail": "Network ready",
@@ -130,10 +130,10 @@
     },
     "vertices": {
       "artifacts": {
-        "candidates.pkl": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/03_Vertices/candidates.pkl",
-        "checkpoint": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Output/python_results/checkpoints/checkpoint_vertices.pkl",
-        "chosen_mask.pkl": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/03_Vertices/chosen_mask.pkl",
-        "cropped_candidates.pkl": "/Volumes/LoveSSD/slavv2python/workspace/runs/oracle_180709_E/crop_M_r2024b/03_Vertices/cropped_candidates.pkl"
+        "candidates.pkl": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/03_Vertices/candidates.pkl",
+        "checkpoint": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/02_Output/python_results/checkpoints/checkpoint_vertices.pkl",
+        "chosen_mask.pkl": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/03_Vertices/chosen_mask.pkl",
+        "cropped_candidates.pkl": "/Volumes/LoveSSD/phd-slavv/workspace/runs/oracle_180709_E/crop_M_r2024b/03_Vertices/cropped_candidates.pkl"
       },
       "completed_at": "2026-09-05T21:44:41Z",
       "detail": "Vertices ready",

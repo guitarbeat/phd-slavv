@@ -1,4 +1,4 @@
-# Contributing to slavv2python
+# Contributing to phd-slavv
 
 ## In short
 

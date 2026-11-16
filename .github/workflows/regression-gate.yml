@@ -31,7 +31,14 @@ jobs:
     - name: Install dependencies
       run: |
         uv sync --extra app --extra workspace --extra zarr
-        
+
+    - name: Build native C++20 principal-energy kernel
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y --no-install-recommends g++
+        g++ --version
+        CXX=g++ bash slavv_python/pipeline/energy/csrc/build.sh
+
     - name: Format Check (Ruff)
       run: uv run ruff format --check slavv_python tests
       
