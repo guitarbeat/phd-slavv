@@ -706,12 +706,17 @@ export function App({ data, setTriggerValue }: { data: CuratorData; setTriggerVa
   const axis = session.view.axis;
   const axisName = (["Y", "X", "Z"] as const)[axis];
   const maxDepth = data.shape[axis] - 1;
+  const showTrustClaim = data.showTrustClaim ?? !data.degradedReason;
 
   return (
     <main className="matlab-curator">
       <header className="mc-header">
         <div>
-          <span className="mc-eyebrow">SLAVV graphical curator</span>
+          <span className="mc-eyebrow">
+            {showTrustClaim
+              ? "Trust path · MATLAB-familiar"
+              : "SLAVV graphical curator (degraded — Trust claim suppressed)"}
+          </span>
           <h2>{session.stage === "vertices" ? "Vertex Curator" : "Edge Curator"}</h2>
         </div>
         <div className="mc-stage-switch" aria-label="Curation stage">

@@ -30,7 +30,7 @@ jobs:
         
     - name: Install dependencies
       run: |
-        uv sync --extra app --extra workspace --extra zarr
+        uv sync --locked --extra app --extra zarr
 
     - name: Build native C++20 principal-energy kernel
       run: |
