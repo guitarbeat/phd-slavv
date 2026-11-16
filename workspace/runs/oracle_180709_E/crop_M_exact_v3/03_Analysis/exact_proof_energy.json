@@ -1,5 +1,5 @@
 {
-  "dest_run_root": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact_v3",
+  "dest_run_root": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact_v3",
   "energy_float_gate": {
     "atol": 1e-09,
     "denorm_threshold": 0.001,
@@ -43,10 +43,10 @@
   "first_failing_field_path": null,
   "first_failing_stage": null,
   "first_failure": null,
-  "matlab_batch_dir": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\oracles\\180709_E_crop_M_v2\\01_Input\\matlab_results\\batch_260624-105705",
+  "matlab_batch_dir": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\oracles\\180709_E_crop_M_v2\\01_Input\\matlab_results\\batch_260624-105705",
   "passed": true,
   "report_scope": "exact route",
-  "source_run_root": "D:\\2P_Data\\Aaron\\slavv2python\\workspace\\runs\\oracle_180709_E\\crop_M_exact_v3",
+  "source_run_root": "D:\\2P_Data\\Aaron\\phd-slavv\\workspace\\runs\\oracle_180709_E\\crop_M_exact_v3",
   "stage_summaries": {
     "energy": {
       "field_count": 4,

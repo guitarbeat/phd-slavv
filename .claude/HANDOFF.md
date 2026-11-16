@@ -1,21 +1,22 @@
-# Phase 1 parity handoff and synthesis
+# Phase 1 Parity & Phase 2 Optimization Handoff and Synthesis
 
-**Last synthesized:** 2026-08-18 (Phase 1 CLOSED + frozen baseline; workspace volumes lightened; stretch `blocked_float_path`)
+**Last synthesized:** 2026-10-26 (Phase 1 CLOSED; Phase 2 Edges 10.45x accelerated under ADR 0014; Energy FFT accelerated under ADR 0015; canonical_full_r2024b_v1 100% complete)
 
-This is the operator brief for the current exact-route effort. Do not use
-dated agent passovers, PID snapshots, or parallel-work checklists as current
-status. When findings [ONE TRUTH](../docs/reference/core/EXACT_PROOF_FINDINGS.md#one-truth--phase-1-parity-validated-from-disk) changes, re-synthesize this file the same day.
+This is the operator brief for the current effort. Comprehensive handover document is available at [docs/HANDOVER.md](../docs/HANDOVER.md).
 
 ## Canonical records
 
 | Need | Source of truth |
 |---|---|
+| **Phase 2 Handover & Summary** | [docs/HANDOVER.md](../docs/HANDOVER.md) |
+| **Phase 2 Profiling & Bottlenecks** | [docs/investigations/PHASE2_PERFORMANCE_PROFILING_REPORT.md](../docs/investigations/PHASE2_PERFORMANCE_PROFILING_REPORT.md) |
+| **Phase 2 Edges Regression Gates** | [ADR 0014](../docs/adr/0014-phase2-optimization-regression-gates.md) |
+| **Phase 2 Energy FFT Acceleration** | [ADR 0015](../docs/adr/0015-phase2-energy-fft-preindexed-symmetric-ifft.md) |
 | **Live pass/fail, residual claim, proof paths** | [EXACT_PROOF_FINDINGS.md — ONE TRUTH](../docs/reference/core/EXACT_PROOF_FINDINGS.md#one-truth--phase-1-parity-validated-from-disk) |
 | Active work and checkboxes | [docs/TODO.md](../docs/TODO.md) |
 | Phase 1 requirements | [phase-1-exact-route-spec.md](../docs/plans/phase-1-exact-route-spec.md) |
-| Edges/Network bar + closure policy | [ADR 0012](../docs/adr/0012-edge-watershed-parity-bar.md) (post-v6 addendum) |
+| Edges/Network bar + closure policy | [ADR 0012](../docs/adr/0012-edge-watershed-parity-bar.md) |
 | Claimed Trace Energy provenance | [ADR 0013](../docs/adr/0013-claimed-energy-trace-provenance.md) |
-| Run commands and evidence format | [PARITY_PRE_GATE.md](../docs/reference/workflow/PARITY_PRE_GATE.md), [PARITY_RUN_EVIDENCE.md](../docs/reference/workflow/PARITY_RUN_EVIDENCE.md) |
 | Doc authority map | [docs/README.md](../docs/README.md#documentation-authority-map-one-concept--one-home) |
 | Repository and parity guardrails | [AGENTS.md](../AGENTS.md) |
 
@@ -29,6 +30,7 @@ status. When findings [ONE TRUTH](../docs/reference/core/EXACT_PROOF_FINDINGS.md
 - **Frozen baseline:** [phase1-baseline-freeze.json](../docs/reference/core/phase1-baseline-freeze.json). Do not overwrite freeze JSON `do_not_overwrite` / `LIVE_DEST_NAMES` (`canonical_full_v18`, `crop_M_exact_v3`, `crop_M_stretch_engine_v2`). Writer blocklist `PROTECTED_DEST_NAMES` also includes historical `canonical_full_v16`.
 - Former Network one-strand fail was Edge Selection Ranking Residual; Claimed Trace Energy bake ([ADR 0013](../docs/adr/0013-claimed-energy-trace-provenance.md)) fixed Edge Set ranking and Network followed.
 - **Crop = regression guard.** Historical `v16` proofs are archived (volume removed 2026-08-18). **Do not claim `v17`.**
+- **Optional R2024b reproduction:** a launchd-owned MATLAB full-volume writer is running against `180709_E`. This is non-claim work and does not change the certified `v18` answer. Live state and exact commands are in [findings](../docs/reference/core/EXACT_PROOF_FINDINGS.md#r2024b-cross-version-reproduction-non-claim) and [the macOS runbook](../docs/solutions/parity/macos-launchd-matlab-batches.md).
 - Cite proofs with `slavv parity inspect-proof --path <json> --require-evaluated`. Do not read the [findings diary](../docs/investigations/exact-proof-findings-diary/README.md) as status.
 
 ### Do not
@@ -103,7 +105,36 @@ Phase 1 already closed on `canonical_full_v18`. Do **not** resurrect `v4`…`v16
   slavv parity inspect-proof --path workspace/runs/oracle_180709_E/canonical_full_v18/03_Analysis/exact_proof_network.json --require-evaluated
   ```
 
-### D. Cold start
+### D. Optional R2024b full-volume reproduction (active)
+
+This is a cross-version reproduction, not a Phase 1 prerequisite. The source
+TIFF, preserved oracle, and `canonical_full_v18` must remain read-only. Do not
+use a direct MATLAB child of Codex/ChatGPT and do not infer success from
+`open -W` returning zero.
+
+```bash
+# Read-only live status; safe from a later terminal or Codex session.
+uv run python scripts/parity/macos_matlab_job.py status
+
+# Cooperative process pause: preserves batch checkpoints.
+uv run python scripts/parity/macos_matlab_job.py pause
+
+# Revalidate the source hash, clear the sentinel, and reuse the same batch.
+uv run python scripts/parity/macos_matlab_job.py resume
+```
+
+Operational state is local under `~/Library/Application
+Support/phd-slavv/matlab-jobs/180709-e-r2024b-full/` because launchd's system
+Python may not be authorized to traverse LoveSSD. MATLAB itself writes the
+external experiment output. A valid terminal success requires
+`runtime/matlab_result.json` with an `attempt_nonce` matching `state.json`.
+
+After MATLAB completes: validate its vectors, promote only to a **fresh**
+R2024b oracle root, launch one fresh Python exact-route run with `n_jobs=1`, and
+run evaluated Energy → Vertices → Edges → Network proofs. Preserve the label
+“optional R2024b cross-version reproduction” until those proofs finish.
+
+### E. Cold start
 
 1. Read [ONE TRUTH](../docs/reference/core/EXACT_PROOF_FINDINGS.md#one-truth--phase-1-parity-validated-from-disk).
 2. No concurrent writer: read `writer_lease.json` and test the PID. Do not block on `slavv jobs list`.

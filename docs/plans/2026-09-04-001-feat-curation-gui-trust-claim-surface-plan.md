@@ -133,7 +133,7 @@ This plan owns **Trust claim governance** for the curation GUI only. Surrounding
 
 ### Key Technical Decisions
 
-- KTD1. **ADR number is 0014; matrix lives as a markdown table in the ADR.** (session-settled: user-approved — planning deferred Q1 resolved by agent: checklist in ADR over a machine-readable status file for v1.) Initial cell statuses after this change set: `claim-surface honesty` may go green when U2–U4 land; all other R4 cells stay red until follow-on evidence plans. Governs U1.
+- KTD1. **ADR number is 0016; matrix lives as a markdown table in the ADR.** (session-settled: user-approved — planning deferred Q1 resolved by agent: checklist in ADR over a machine-readable status file for v1.) Initial cell statuses after this change set: `claim-surface honesty` may go green when U2–U4 land; all other R4 cells stay red until follow-on evidence plans. Governs U1.
 - KTD2. **Forbidden vs allowed claim language.** Forbidden while any matrix cell is red: `1:1`, `MATLAB-identical`, `feature parity with the MATLAB GCI` as a Trust claim. Allowed: naming the browser path as the designated Trust / MATLAB-familiar surface. Desktop labels use “desktop review” / “experimental” without “MATLAB-style.” Governs U2–U5. Covers R5, R2.
 - KTD3. **STRATEGY gets a one-line ADR pointer** under Trust / equivalence. (Resolves deferred Q3: yes, same change set.) Governs U4.
 - KTD4. **Degraded-mode Trust chrome** — when `degradedReason` is set, the browser curator must not show Trust MATLAB-familiar badge/title chrome; keep the existing degraded reason disclosure. Governs U5. Covers R3.
@@ -142,7 +142,7 @@ This plan owns **Trust claim governance** for the curation GUI only. Surrounding
 ### High-Level Technical Design
 
 ```text
-STRATEGY Trust ──► ADR 0014 claim matrix (red/green cells)
+STRATEGY Trust ──► ADR 0016 claim matrix (red/green cells)
                          │
                          ▼
               language gate (R5)
@@ -167,19 +167,19 @@ Sequence: write ADR + index → relabel UI/docs → degraded chrome → tests. N
 **Deferred (non-blocking)**
 
 - DQ1. Exact Trust badge UI affordance in the React curator (title chip vs status line) — implementer chooses the smallest chrome change that satisfies R3.
-- DQ2. Whether `docs/TODO.md` gets a checkbox linking ADR 0014 — optional hygiene, not DoD.
+- DQ2. Whether `docs/TODO.md` gets a checkbox linking ADR 0016 — optional hygiene, not DoD.
 
 ---
 
 ## Implementation Units
 
-### U1. ADR 0014 curator Trust claim matrix
+### U1. ADR 0016 curator Trust claim matrix
 
 **Goal:** Record the claim surface and checkable matrix as the language-gate authority.
 
 **Requirements:** R4, R5, R7
 
-**Files:** `docs/adr/0014-curator-trust-claim-matrix.md` (create), `docs/adr/README.md` (index row)
+**Files:** `docs/adr/0016-curator-trust-claim-matrix.md` (create), `docs/adr/README.md` (index row)
 
 **Approach:** Follow ADR 0013 shape (In short, Status, Context, Decision, Consequences, Considered Options). Decision names browser as sole Trust claim surface and lists matrix cells with initial red/green. State that science Certification (0011/0012) is a separate Trust track. Ban `1:1` / identical phrasing until all claim-surface cells are green.
 
@@ -235,13 +235,13 @@ Sequence: write ADR + index → relabel UI/docs → degraded chrome → tests. N
 
 ### U4. Workflow docs + STRATEGY pointer
 
-**Goal:** Maintained docs and strategy name one Trust surface and cite ADR 0014.
+**Goal:** Maintained docs and strategy name one Trust surface and cite ADR 0016.
 
 **Requirements:** R6, R7
 
 **Files:** `docs/reference/workflow/MANUAL_CURATION_WORKFLOW.md`, `STRATEGY.md`
 
-**Approach:** Update “Curate the result” copy: browser = Trust MATLAB-familiar path; desktop = desktop/experimental review (no MATLAB-style Trust claim). Add one Trust-track sentence pointing at ADR 0014. Do not change science Certification wording beyond clarifying the GUI claim is separate.
+**Approach:** Update “Curate the result” copy: browser = Trust MATLAB-familiar path; desktop = desktop/experimental review (no MATLAB-style Trust claim). Add one Trust-track sentence pointing at ADR 0016. Do not change science Certification wording beyond clarifying the GUI claim is separate.
 
 **Patterns:** current MANUAL_CURATION sections; STRATEGY Trust / equivalence paragraph
 
@@ -249,7 +249,7 @@ Sequence: write ADR + index → relabel UI/docs → degraded chrome → tests. N
 
 - None automated beyond optional U6 doc path scan if included.
 
-**Verification:** Docs read-through; STRATEGY cites `docs/adr/0014-curator-trust-claim-matrix.md`.
+**Verification:** Docs read-through; STRATEGY cites `docs/adr/0016-curator-trust-claim-matrix.md`.
 
 ---
 
@@ -319,10 +319,10 @@ Manual: open Curation workflow radio (AE1); load a degraded Energy-only session 
 
 ## Definition of Done
 
-- ADR 0014 exists, indexed in `docs/adr/README.md`, and defines all R4 cells with initial statuses per KTD1.
+- ADR 0016 exists, indexed in `docs/adr/README.md`, and defines all R4 cells with initial statuses per KTD1.
 - Streamlit desktop option is not labeled MATLAB-style; browser is the named Trust MATLAB-familiar surface.
 - Qt module docstring and NAPARI/workflow docs no longer assert 1:1 / Trust MATLAB-familiar for desktop paths.
-- STRATEGY Trust paragraph cites ADR 0014.
+- STRATEGY Trust paragraph cites ADR 0016.
 - Degraded browser sessions suppress Trust claim chrome (R3).
 - U6 tests green.
 - Abandoned experimental copy from this change set is not left in the diff.

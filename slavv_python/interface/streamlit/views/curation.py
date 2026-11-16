@@ -94,7 +94,7 @@ def show_ml_curation_page():
             ),
             index=0,
             help=(
-                "The Trust MATLAB-familiar path stays in this tab (ADR 0014). "
+                "The Trust MATLAB-familiar path stays in this tab (ADR 0016). "
                 "The desktop viewer opens a separate Qt or napari window for experimental review."
             ),
         )
@@ -110,7 +110,7 @@ def show_ml_curation_page():
         st.info(
             "This Python desktop interface offers a four-panel exploratory layout: "
             "volume map, volume display, intensity histogram, and energy histogram. "
-            "It is **not** the Trust MATLAB-familiar claim surface (ADR 0014). "
+            "It is **not** the Trust MATLAB-familiar claim surface (ADR 0016). "
             "It opens in a **separate window**; close it to save and continue."
         )
         if not desktop_curator_available():

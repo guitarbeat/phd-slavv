@@ -74,12 +74,12 @@ git tag -a v0.1.0 -m "Vascular vectorization engine stable beta"
 ### Standalone Installation
 Users can run a tagged release without cloning (`uvx` isolates the tool from this repo's `.venv`):
 ```powershell
-uvx --from git+https://github.com/UTFOIL/slavv2python.git@v0.1.0 slavv run -i volume.tif -o slavv_output
+uvx --from git+https://github.com/UTFOIL/phd-slavv.git@v0.1.0 slavv run -i volume.tif -o slavv_output
 ```
 
 To put `slavv` on `PATH` for repeated use:
 ```powershell
-uv tool install git+https://github.com/UTFOIL/slavv2python.git@v0.1.0
+uv tool install git+https://github.com/UTFOIL/phd-slavv.git@v0.1.0
 ```
 
 Developers working in a clone should keep using `uv sync` and `uv run`, not `uvx`.

@@ -23,4 +23,6 @@ Index of ADRs for the SLAVV Python port. Each record captures the context, decis
 | [0011](0011-energy-float-certification-policy.md) | Energy Float Certification Policy | Accepted (2026-06-24) |
 | [0012](0012-edge-watershed-parity-bar.md) | Edge Watershed Parity Bar (ownership-map + trace tolerance) | Accepted (2026-06-25) |
 | [0013](0013-claimed-energy-trace-provenance.md) | Claimed Energy Trace Provenance (bake at Watershed finalize) | Accepted (2026-08-14) |
-| [0014](0014-curator-trust-claim-matrix.md) | Curator Trust Claim Matrix (browser sole claim surface) | Accepted (2026-09-04) |
+| [0014](0014-phase2-optimization-regression-gates.md) | Phase 2 Performance Optimization and Parity Regression Gates | Accepted (2026-10-26) |
+| [0015](0015-phase2-energy-fft-preindexed-symmetric-ifft.md) | Phase 2 Energy Stage FFT Multi-Threading and Pre-Indexed Symmetric IFFT Acceleration | Accepted (2026-10-26) |
+| [0016](0016-curator-trust-claim-matrix.md) | Curator Trust Claim Matrix (browser sole claim surface) | Accepted (2026-09-04) |

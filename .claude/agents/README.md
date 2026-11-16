@@ -1,6 +1,6 @@
 # Agent Definitions
 
-AI agent definitions for specialized tasks in the slavv2python repository.
+AI agent definitions for specialized tasks in the phd-slavv repository.
 
 ## Overview
 

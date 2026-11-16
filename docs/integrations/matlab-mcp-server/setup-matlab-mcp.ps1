@@ -9,7 +9,7 @@
 
     Requires MATLAB R2021a or later.
 
-    PARITY WARNING (slavv2python): never use this server to regenerate the parity
+    PARITY WARNING (phd-slavv): never use this server to regenerate the parity
     oracle — that must stay on hand-run R2019a .m scripts. Safe for ad-hoc MATLAB
     exploration only.
 

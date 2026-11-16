@@ -3,21 +3,12 @@ name: check-compiler-errors
 description: Run compile and type-check commands and report failures
 ---
 
-# Check compiler errors
 
-## Trigger
+# Check Compiler Errors
 
-Compile or type-check failures are blocking local validation or CI.
+Repository paths and commands are relative to the selected working repository. Read its AGENTS.md and the shared library guidance; load only the procedure that matches the task.
 
-## Workflow
 
-1. Run the repo's compile and type-check commands.
-2. Summarize errors by file and type.
-3. Fix the highest-confidence issues first.
-4. Re-run checks until clean or blocked.
+## Select the relevant procedure
 
-## Output
-
-- Current compile and type-check status
-- Error summary grouped by file and category
-- Fixes applied and remaining blockers
+- [phd-slavv: check-compiler-errors](references/modes/phd-slavv-check-compiler-errors-agents/workflow.md). Read only when this procedure matches the task.

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Grill With Docs"
+  short_description: "Resolve terms through a focused interview"
+  default_prompt: "Use $grill-with-docs to resolve one ambiguous PhD-Writing term and record the decision."
+policy:
+  allow_implicit_invocation: false

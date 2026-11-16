@@ -13,7 +13,7 @@ exists alongside the maintained Qt/PyVista curator.
 The current **desktop** curator lives in
 `slavv_python/visualization/interactive_curator.py` (experimental / exploratory
 review — **not** the Trust MATLAB-familiar claim surface; see
-[ADR 0014](../adr/0014-curator-trust-claim-matrix.md)). The new prototype lives in
+[ADR 0016](../adr/0016-curator-trust-claim-matrix.md)). The new prototype lives in
 `slavv_python/visualization/napari_curator.py` and is intended as a lower-code
 surface for image + point + path review.
 
@@ -43,7 +43,7 @@ Today the `napari` curator supports:
   curator after the viewer closes
 
 It does not attempt to recreate a Trust-certified MATLAB-familiar four-panel UI.
-The Trust claim surface is the browser curator (ADR 0014).
+The Trust claim surface is the browser curator (ADR 0016).
 
 ## How To Launch It
 

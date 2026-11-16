@@ -1,4 +1,4 @@
-"""Comprehensive End-to-End (E2E) Acceptance Test Suite for slavv2python uv Migration.
+"""Comprehensive End-to-End (E2E) Acceptance Test Suite for phd-slavv uv Migration.
 
 Methodology (4-Tier E2E Testing Architecture):
 - Tier 1: Feature Coverage (>=5 test cases per feature: Build System, uv.lock, uv sync extras, uv run dev tooling, CI workflows)

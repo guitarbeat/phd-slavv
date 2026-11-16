@@ -16,7 +16,7 @@ from slavv_python.interface.streamlit.state.curation import summarize_processing
 from slavv_python.interface.streamlit.state.dashboard import load_dashboard_context
 from slavv_python.interface.streamlit.state.workflow import STAGE_ORDER, summarize_workflow
 
-DASHBOARD_REPO_URL = "https://github.com/UTFOIL/slavv2python"
+DASHBOARD_REPO_URL = "https://github.com/UTFOIL/phd-slavv"
 DASHBOARD_DOCS_URL = f"{DASHBOARD_REPO_URL}/blob/main/docs/README.md"
 DASHBOARD_CURATION_URL = (
     f"{DASHBOARD_REPO_URL}/blob/main/docs/reference/workflow/MANUAL_CURATION_WORKFLOW.md"
@@ -55,8 +55,9 @@ def show_dashboard_page() -> None:
     st.session_state.setdefault("dashboard_focus", "Overview")
     summary = summarize_workflow(st.session_state)
     context = load_dashboard_context(st.session_state)
+    workspace = context["workspace"]
     results = context["results"]
-    snapshot = context["snapshot"]
+    snapshot = workspace.snapshot
 
     st.header("SLAVV workflow")
     st.caption("Process, review, visualize, and analyze one vascular dataset.")
@@ -116,9 +117,9 @@ def show_dashboard_page() -> None:
             )
             if focus in (None, "Pipeline"):
                 render_stage_unit_bars(snapshot)
-            if context["run_dir"]:
+            if workspace.has_run:
                 render_run_ops_panel(
-                    context["run_dir"],
+                    workspace.run_dir,
                     snapshot=snapshot,
                     expanded=focus in (None, "Pipeline"),
                 )
@@ -131,7 +132,7 @@ def show_dashboard_page() -> None:
             int(share_metrics.get("share_report_downloaded", 0)),
             help="Reports downloaded in this browser session.",
         )
-        if summary.run_dir:
+        if workspace.has_run:
             st.caption("The full source path is available in the sidebar Run location section.")
 
     if st.session_state.get("curation_baseline_counts") and results is not None:

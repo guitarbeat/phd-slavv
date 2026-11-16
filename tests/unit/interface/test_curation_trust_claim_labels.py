@@ -1,4 +1,4 @@
-"""Regression guards for ADR 0014 curator Trust claim language."""
+"""Regression guards for ADR 0016 curator Trust claim language."""
 
 from __future__ import annotations
 

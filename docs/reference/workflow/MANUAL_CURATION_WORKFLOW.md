@@ -22,7 +22,7 @@ Select **Run processing** and wait for all four pipeline stages to complete. The
 ## Curate the result
 
 Open **Curation** after an Edge Set is available. The default **Trust path:
-MATLAB-familiar browser curator** (ADR 0014) follows the two-stage sequence:
+MATLAB-familiar browser curator** (ADR 0016) follows the two-stage sequence:
 Vertex Curation, then Edge Curation. It provides:
 
 - calibrated X, Y, and Z projections with depth, logarithmic thickness, pan, zoom, and a physical scale bar;
@@ -35,7 +35,7 @@ Pointer and slider interactions stay in the component, so they do not rerun the 
 
 Applying review removes rejected vertices and edges, drops edges incident to rejected vertices, remaps connection indices, and rebuilds the Network from the retained objects. It also invalidates stale analysis and export/share signatures so downstream pages use the current network.
 
-The original intensity volume is resolved from the current processing session or run manifest. When only Energy is available, the workspace explicitly enters degraded projection mode: intensity controls and the cranium Crop tool are disabled, and Trust claim chrome is suppressed (ADR 0014). Add Vertex is similarly disabled when scale/radius metadata is unavailable.
+The original intensity volume is resolved from the current processing session or run manifest. When only Energy is available, the workspace explicitly enters degraded projection mode: intensity controls and the cranium Crop tool are disabled, and Trust claim chrome is suppressed (ADR 0016). Add Vertex is similarly disabled when scale/radius metadata is unavailable.
 
 **Desktop manual review (experimental)** is a Python Qt/PyVista or napari interface that opens in a separate local window when optional GUI dependencies and a display are available. It is **not** the Trust MATLAB-familiar claim surface. Automatic and model-assisted workflows operate on the same active results.
 

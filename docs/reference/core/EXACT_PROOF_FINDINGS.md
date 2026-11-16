@@ -2,7 +2,7 @@
 
 [Up: Reference Docs](../README.md) · [Authority map](../../README.md#documentation-authority-map-one-concept--one-home) · [HANDOFF](../../../.claude/HANDOFF.md) · [TODO](../../TODO.md)
 
-**Last Updated:** 2026-08-18  
+**Last Updated:** 2026-09-06
 **Role:** **Only** live source of truth for exact-route MATLAB↔Python parity status (runs, proofs, blockers, residual claim).  
 **Not here:** task checkboxes ([TODO](../../TODO.md)), operator commands ([HANDOFF](../../../.claude/HANDOFF.md)), figure paint constants ([campaign_series.py](../../../figures/claim/campaign_series.py) — mirror KPIs only), investigation diary ([archive](../../investigations/exact-proof-findings-diary/README.md)).
 
@@ -36,6 +36,23 @@
 - Final edges on `v18`: has oracle `(34897, 38584)`, lacks extra `(26444, 38584)`. Contrast `v16` finals: had extra, lacked oracle.
 - `v18` candidate traces for residual hub: claimed maxes **0.0** (extra) and **−0.238…** (oracle) — match MATLAB L846 claimed map; `v16` candidates still show original-field **−9.24 / −7.73**.
 - Energy/Vertices stage JSON archived from `canonical_full_v4` (lineage seed); checkpoints carried into `v18`.
+
+### R2024b cross-version reproduction (completed)
+
+> **Boundary:** this run is an independent cross-version reproducibility check against the
+> certified full `180709_E` surface. It does not reopen Phase 1 or replace the frozen
+> baseline `canonical_full_v18`.
+
+**Validated completion (2026-10-26):** MATLAB R2024b full-volume batch (`batch_260907-001109`) was promoted to structured oracle `workspace/oracles/180709_E_full_r2024b` and verified with `ensure-oracle-artifacts --stage all`. The corresponding Python reproduction run `canonical_full_r2024b_v1` was executed to 100% completion across all 4 stages:
+
+| Stage | Verdict | Evidence / Metrics | Notes |
+| :--- | :--- | :--- | :--- |
+| **Energy** | ✅ **PASS** (ADR 0011) | `canonical_full_r2024b_v1/03_Analysis/exact_proof_energy.json` | **0 scale mismatches** across all 16,777,216 voxels (pass rate 1.0); max abs delta on scale-agreeing: $2.72 \times 10^{-7}$. |
+| **Vertices** | ✅ **PASS** (ADR 0011) | `canonical_full_r2024b_v1/03_Analysis/exact_proof_vertices.json` | **59,408 vertices**, exact match on positions, scales, and rank-ramp energies. |
+| **Edges** | ✅ **EXACT MATCH** | `canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_edges.pkl` | **69,500 / 69,500 connections** (`np.array_equal == True`, 100.0% overlap in exact row order); trace energies allclose (max delta $1.45 \times 10^{-7}$). |
+| **Network** | ✅ **PASS** (ADR 0012) | `canonical_full_r2024b_v1/03_Analysis/exact_proof_network.json` | **25,371 bifurcations** (`np.array_equal == True`, bit-identical); **48,049 strand pairs** multiset match (`adr0012_evaluated: true`, `passed: true`). |
+
+**Release evidence:** `canonical_full_r2024b_v1/03_Analysis/release_evidence.json` persisted with `"proof_passed": true`.
 
 ### Frozen Phase 1 baseline (2026-08-17)
 
@@ -153,6 +170,7 @@ Curated index of solved problems under `docs/solutions/`. Search via YAML frontm
 |-------|-----|
 | MATLAB energy HDF5 + `promote-oracle` | [matlab-v200-energy-hdf5-oracle-loader.md](../../solutions/integration-issues/matlab-v200-energy-hdf5-oracle-loader.md) |
 | Detached exact-run jobs (Windows: use `Start-Process resume-exact-run`, not `launch-exact-run`) | [detached-exact-run-jobs.md](../../solutions/parity/detached-exact-run-jobs.md) |
+| Pause-safe MATLAB batches on macOS (launchd + LaunchServices + nonce result) | [macos-launchd-matlab-batches.md](../../solutions/parity/macos-launchd-matlab-batches.md) |
 | Run/proof evidence template | [PARITY_RUN_EVIDENCE.md](../workflow/PARITY_RUN_EVIDENCE.md) |
 | Sparse Meshgrid Memory Optimization | [sparse-meshgrid-memory-optimization.md](../../solutions/parity/sparse-meshgrid-memory-optimization.md) |
 | MATLAB Stride Phase Lead | [matlab-stride-phase-lead.md](../../solutions/parity/matlab-stride-phase-lead.md) |
@@ -164,5 +182,6 @@ Curated index of solved problems under `docs/solutions/`. Search via YAML frontm
 | Curated vertices rank-ramp energies | [curated-vertices-rank-ramp-energies.md](../../solutions/integration-issues/curated-vertices-rank-ramp-energies.md) |
 | Crop Energy stretch leftover (tiny photos match; crop last digits do not) | [crop-energy-stretch-float-isolation.md](../../solutions/parity/crop-energy-stretch-float-isolation.md) |
 | MATLAB watershed env-var trace hooks (re-apply patch; do not commit into Vectorization-Public) | [matlab-watershed-env-trace-hooks.md](../../solutions/parity/matlab-watershed-env-trace-hooks.md) |
+| Phase 2 optimization regression gates (ADR 0014) | [0014-phase2-optimization-regression-gates.md](../../adr/0014-phase2-optimization-regression-gates.md) |
 
 _Add rows here when a new compound doc is parity-relevant; do not duplicate full write-ups in this file._

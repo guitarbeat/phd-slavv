@@ -1,0 +1,160 @@
+{
+  "artifacts": {
+    "edges.candidate_audit.json": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/candidate_audit.json",
+    "edges.candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/candidates.pkl",
+    "edges.checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_edges.pkl",
+    "edges.chosen_edges.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/chosen_edges.pkl",
+    "edges.phase2_edges_split.json": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/phase2_edges_split.json",
+    "edges.phase2_edges_split.json.sha256": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/phase2_edges_split.json.sha256",
+    "energy.best_energy.npy": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Energy/best_energy.npy",
+    "energy.best_scale.npy": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Energy/best_scale.npy",
+    "energy.checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_energy.pkl",
+    "network.adjacency.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/adjacency.pkl",
+    "network.checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_network.pkl",
+    "network.phase2_network_split.json": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/phase2_network_split.json",
+    "network.strands.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/strands.pkl",
+    "preprocess_done": "true",
+    "vertices.candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/candidates.pkl",
+    "vertices.checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_vertices.pkl",
+    "vertices.chosen_mask.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/chosen_mask.pkl",
+    "vertices.cropped_candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/cropped_candidates.pkl"
+  },
+  "created_at": "2026-09-08T04:32:12Z",
+  "current_detail": "Run completed",
+  "current_stage": "network",
+  "elapsed_seconds": 4162546.489573002,
+  "errors": [
+    {
+      "at": "2026-10-26T05:56:29Z",
+      "message": "Resume blocked because the parameters fingerprint changed. Re-run with force_rerun_from='energy' to start a fresh pipeline."
+    }
+  ],
+  "eta_seconds": 0.0,
+  "input_fingerprint": "40dd7ea8d6ec3a47e4ffaf3de31e1f38f0f148e52e09e60bc616c2becb456cff",
+  "last_event": "Run completed",
+  "optional_tasks": {},
+  "overall_progress": 1.0,
+  "params_fingerprint": "beafbd178404f10cfd032d95fe0dc6877055f3ffcc951292c8261c4a9d94688f",
+  "provenance": {
+    "image_shape": [
+      64,
+      512,
+      512
+    ],
+    "layout": "structured",
+    "slavv_python": "pipeline",
+    "stop_after": "network"
+  },
+  "run_id": "bdab340da1bf",
+  "stages": {
+    "edges": {
+      "artifacts": {
+        "candidate_audit.json": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/candidate_audit.json",
+        "candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/candidates.pkl",
+        "checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_edges.pkl",
+        "chosen_edges.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/chosen_edges.pkl",
+        "phase2_edges_split.json": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/phase2_edges_split.json",
+        "phase2_edges_split.json.sha256": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/04_Edges/phase2_edges_split.json.sha256"
+      },
+      "completed_at": "2026-10-26T08:47:27Z",
+      "detail": "Edges ready",
+      "elapsed_seconds": 777.0,
+      "eta_seconds": 0.0,
+      "name": "edges",
+      "peak_memory_bytes": 2448752640,
+      "progress": 1.0,
+      "resumed": false,
+      "started_at": "2026-10-26T08:34:30Z",
+      "status": "completed",
+      "substage": "finalize_edges",
+      "units_completed": 3,
+      "units_total": 3,
+      "updated_at": "2026-10-26T08:47:27Z"
+    },
+    "energy": {
+      "artifacts": {
+        "best_energy.npy": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Energy/best_energy.npy",
+        "best_scale.npy": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Energy/best_scale.npy",
+        "checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_energy.pkl"
+      },
+      "completed_at": "2026-10-26T08:32:43Z",
+      "detail": "Energy Field ready",
+      "elapsed_seconds": 9342.074440956116,
+      "eta_seconds": 0.0,
+      "name": "energy",
+      "peak_memory_bytes": 2975629312,
+      "progress": 1.0,
+      "resumed": false,
+      "started_at": "2026-10-26T05:57:01Z",
+      "status": "completed",
+      "substage": "exact_parity_chunks",
+      "units_completed": 3286,
+      "units_total": 3286,
+      "updated_at": "2026-10-26T08:32:43Z"
+    },
+    "network": {
+      "artifacts": {
+        "adjacency.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/adjacency.pkl",
+        "checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_network.pkl",
+        "phase2_network_split.json": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/phase2_network_split.json",
+        "strands.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/05_Network/strands.pkl"
+      },
+      "completed_at": "2026-10-26T08:47:58Z",
+      "detail": "Network ready",
+      "elapsed_seconds": 31.0,
+      "eta_seconds": 0.0,
+      "name": "network",
+      "peak_memory_bytes": 1906294784,
+      "progress": 1.0,
+      "resumed": false,
+      "started_at": "2026-10-26T08:47:27Z",
+      "status": "completed",
+      "substage": "finalize",
+      "units_completed": 5,
+      "units_total": 5,
+      "updated_at": "2026-10-26T08:47:58Z"
+    },
+    "preprocess": {
+      "artifacts": {},
+      "completed_at": "2026-10-26T05:57:01Z",
+      "detail": "Preprocessing complete",
+      "elapsed_seconds": 4152289.0,
+      "eta_seconds": null,
+      "name": "preprocess",
+      "peak_memory_bytes": 670892032,
+      "progress": 1.0,
+      "resumed": false,
+      "started_at": "2026-09-08T04:32:12Z",
+      "status": "completed",
+      "substage": "",
+      "units_completed": 1,
+      "units_total": 1,
+      "updated_at": "2026-10-26T05:57:01Z"
+    },
+    "vertices": {
+      "artifacts": {
+        "candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/candidates.pkl",
+        "checkpoint": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/02_Output/python_results/checkpoints/checkpoint_vertices.pkl",
+        "chosen_mask.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/chosen_mask.pkl",
+        "cropped_candidates.pkl": "/Volumes/LoveSSD/NeuroVASC/repos/phd-slavv/workspace/runs/oracle_180709_E/canonical_full_r2024b_v1/03_Vertices/cropped_candidates.pkl"
+      },
+      "completed_at": "2026-10-26T08:34:30Z",
+      "detail": "Vertices ready",
+      "elapsed_seconds": 107.71271085739136,
+      "eta_seconds": 0.0,
+      "name": "vertices",
+      "peak_memory_bytes": 2808283136,
+      "progress": 1.0,
+      "resumed": false,
+      "started_at": "2026-10-26T08:32:43Z",
+      "status": "completed",
+      "substage": "finalize",
+      "units_completed": 286,
+      "units_total": 286,
+      "updated_at": "2026-10-26T08:34:30Z"
+    }
+  },
+  "status": "completed",
+  "target_stage": "network",
+  "updated_at": "2026-10-26T08:47:58Z"
+}

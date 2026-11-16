@@ -1,45 +1,33 @@
 ---
 name: workspace-hygiene
-description: Keep the slavv2python repository workspace clean and organized. Use when the user asks to clean the worktree, remove dirty files, tidy the workspace, organize scratch artifacts, prevent root-level junk, or capture/apply workspace hygiene rules.
+description: "Organize, archive, or remove workspace files and source-layout clutter within a requested cleanup scope. Trace active consumers and preserve research evidence. Use consolidate-concepts for merging equivalent definitions and architectural-analysis for a read-only codebase audit."
+metadata:
+  keywords:
+  - archive sprint
+  - cleanup repo
+  - dead code
+  - docs cleanup
+  - remove artifacts
+  - repo cleanup
+  - test cleanup
+  - unused dependencies
+  file_patterns:
+  - '**/archive/**'
+  - '**/cleanup/**'
+  - '**/deprecated/**'
+  - '**/legacy/**'
+  confidence: 0.82
 ---
+
 
 # Workspace Hygiene
 
-Keep the repo root clean, preserve valuable experiment state, and verify the final Git state.
+Repository paths and commands are relative to the selected working repository. Read its AGENTS.md and the shared library guidance; load only the procedure that matches the task.
 
-## Workflow
+Inventory the selected workspace and its active consumers before changing layout. Distinguish source, original data, numerical results, installed dependencies, rebuildable caches and disposable scratch. Trace duplicate bytes and current callers before removing copies. Preserve dirty work, canonical inputs, raw histories, oracles, receipts and software paths. Use the user's explicit cleanup scope; a folder named cache, backup, or quarantine alone does not establish disposability. Keep one canonical owner, update affected links/configuration, and verify retained consumers. Use the static-analysis mode only for an authorized source/dependency cleanup; do not turn ordinary tidying into broad architecture work.
 
-1. Start from the repository root and inspect:
-   - `git status --short --branch`
-   - `git diff --name-only`
-   - `git diff --name-only --cached`
-   - root-level untracked files and directories.
-2. Classify each item before changing anything:
-   - **Tracked edits**: code, docs, tests, config, or generated tracked files.
-   - **Untracked scratch**: one-off diagnostics, logs, prompts, temporary reports, or agent output.
-   - **Experiment state**: anything under `workspace/runs`, `workspace/oracles`, `workspace/datasets`, `workspace/reports`, or `workspace/scratch`.
-   - **Build/cache output**: cache directories such as `.pytest_cache`, `.ruff_cache`, `.mypy_cache`, egg-info, or tool caches.
-3. Preserve by default:
-   - Never delete `workspace/runs`, `workspace/oracles`, `workspace/datasets`, or `workspace/reports` without explicit user approval.
-   - Classify parity experiment data before touching it: **live oracle** (`180709_E_full_v2`, `180709_E_crop_M_v2`), **claim run** (`canonical_full_v18`), **crop guard** (`crop_M_exact_v3` candidates), **stretch dest** (`crop_M_stretch_engine_v2`), **archived proofs** (`workspace/reports/phase1_volume_archive/` — `v4`/`v16` JSON only; volumes removed 2026-08-18, do not resurrect), **contaminated** (`v17` — deleted, do not claim). Freeze JSON `do_not_overwrite` / `LIVE_DEST_NAMES` is live dests; `PROTECTED_DEST_NAMES` is the writer blocklist (includes `v16`). Label or quarantine; delete live dests only with an explicit “delete” request.
-   - Scratch MATLAB dump README stays labeled (`workspace/scratch/matlab_edge_dump/README.md`). The `.mat` dumps were deleted 2026-08-18. `raw_watershed_candidates_canonical.mat` was **crop**, not full.
-   - Never revert tracked user edits unless the user asks for a clean worktree or explicitly names the files.
-   - Never use `git reset --hard`; prefer `git restore` for tracked paths and targeted `git clean -fd -- <paths>` for known untracked junk.
-4. Route clutter:
-   - One-off scripts, logs, prompts, diffs, and diagnostic artifacts belong in `workspace/scratch`, not the repo root.
-   - Ephemeral agent harness output (`agent-tools/`, `terminals/`, recreated `.agents/`) must not live at the repo root; move to `workspace/scratch/` or delete. Canonical agent home is `.claude/` (do not recreate `.agents/` or `.kiro/`).
-   - Test artifacts belong in `workspace/scratch/tmp_tests/` through the repo-local test fixtures.
-   - Durable fixes or runbooks belong in `docs/solutions`; live parity status belongs in `docs/reference/core/EXACT_PROOF_FINDINGS.md`; active tasks belong in `docs/TODO.md`.
-5. Clean deliberately:
-   - For a user request like "clean it all up" or "I don't want anything dirty," revert all unstaged/staged tracked changes to `HEAD` and remove untracked files/directories that are not preserved experiment state.
-   - If an untracked item may contain useful evidence, move it to `workspace/scratch` instead of deleting it, unless the user asked for a fully clean worktree.
-6. Verify and report:
-   - Re-run `git status --short --branch`.
-   - Report what was reverted, removed, moved, or preserved.
-   - The goal state for a full cleanup is exactly `## main...origin/main` or the equivalent clean branch line with no extra entries.
+## Choose by cleanup scope
 
-## Guardrails
-
-- Do not clean broad ignored files with `git clean -fdx` unless the user explicitly asks to remove ignored caches and build outputs.
-- Do not remove parity job logs, PID manifests, or proof artifacts from active run roots while a related process is alive.
-- If `workspace/scratch/crop_energy_rerun_latest.pid` or a run-local `99_Metadata/parity_job.pid` is alive, report it before deleting or moving related artifacts.
+- **Ordinary file, documentation, or test cleanup:** read [scoped cleanup](references/modes/phd-research-repo-cleanup/workflow.md).
+- **Source/dependency restructuring that needs static analysis:** read [tool-assisted consolidation](references/modes/phd-research-workspace-corral/workflow.md). Use only the tools relevant to the requested source scope.
+- **SLAVV cleanup involving parity runs or evidence:** read [SLAVV preservation and cleanup](references/modes/phd-slavv-cleanup/workflow.md). Preserve its oracle, run-state, and scientific evidence rules.

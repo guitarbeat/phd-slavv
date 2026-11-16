@@ -1,4 +1,4 @@
-"""Trust claim labels for curation GUI surfaces (ADR 0014)."""
+"""Trust claim labels for curation GUI surfaces (ADR 0016)."""
 
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ def trust_claim_chrome_visible(degraded_reason: str | None) -> bool:
     """Return True when Trust MATLAB-familiar chrome may be shown.
 
     Degraded / fallback browser presentations must not inherit the Trust badge
-    (ADR 0014 / R3).
+    (ADR 0016 / R3).
     """
     if degraded_reason is None:
         return True

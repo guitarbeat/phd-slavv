@@ -3,11 +3,10 @@
 from __future__ import annotations
 
 import logging
+import os
 import time
 from pathlib import Path  # noqa: TC003
 from typing import TYPE_CHECKING, Any, cast
-
-import numpy as np
 
 from slavv_python.pipeline.edges.audit import (
     _build_edge_candidate_audit,
@@ -18,23 +17,42 @@ from slavv_python.pipeline.edges.candidate_manifest import (
     candidate_as_payload,
 )
 from slavv_python.pipeline.edges.discovery import (
-    EdgeDiscoveryContext,
     _use_watershed_discovery,
     frontier_origin_counts,
     frontier_origin_counts_from_diagnostics,
-    resolve_lumen_radius_pixels_axes,
+    prepare_edge_discovery_context,
     select_edge_discovery,
 )
+from slavv_python.pipeline.edges.execution import EdgeExecutionArtifacts
 from slavv_python.pipeline.edges.payloads import _empty_edges_result
 from slavv_python.pipeline.edges.selection_workflow import select_and_finalize_edge_set
-from slavv_python.pipeline.policy import PipelinePolicy
-from slavv_python.pipeline.vertices.painting import paint_vertex_center_image
 from slavv_python.schema.results import EdgeSet, EnergyResult, VertexSet
 
 if TYPE_CHECKING:
     from slavv_python.engine.state import StageController
 
 logger = logging.getLogger(__name__)
+
+
+def _timing_writer_authorized(stage_controller: StageController | None) -> bool:
+    """Return whether the current process owns the parity writer lease.
+
+    A ``StageController`` permits normal resumable artifact persistence, but it
+    is not itself proof that this process is the authorized parity writer.  The
+    split timing artifact is certification metadata, so require the hardened
+    run-local lease and an exact PID match.
+    """
+    if stage_controller is None:
+        return False
+    from slavv_python.analytics.parity.runs.writer_lease import load_writer_lease
+
+    lease = load_writer_lease(stage_controller.run_context.run_root)
+    if not lease or lease.get("status") != "running":
+        return False
+    try:
+        return int(lease["pid"]) == os.getpid()
+    except (KeyError, TypeError, ValueError):
+        return False
 
 
 class _NullStageController:
@@ -111,32 +129,15 @@ class EdgeManager:
         if len(vertices.positions) == 0:
             return CandidateManifest.empty()
 
-        policy = PipelinePolicy.from_params(params)
-        microns_per_voxel = np.array(
-            params.get("microns_per_voxel", [1.0, 1.0, 1.0]),
-            dtype=policy.precision,
-        )
-        lumen_radius_pixels_axes = resolve_lumen_radius_pixels_axes(
-            energy_data,
-            microns_per_voxel,
-            policy=policy,
-        )
-        vertex_center_image = paint_vertex_center_image(
-            vertices.positions, energy_data.energy.shape
-        )
         discovery = select_edge_discovery(energy_data, params)
-        return discovery.discover(
-            EdgeDiscoveryContext(
-                energy_data=energy_data,
-                vertices=vertices,
-                params=params,
-                stage_controller=cast("StageController", _NullStageController()),
-                vertex_center_image=vertex_center_image,
-                lumen_radius_pixels_axes=lumen_radius_pixels_axes,
-                microns_per_voxel=microns_per_voxel,
-                heartbeat=heartbeat,
-            )
+        context = prepare_edge_discovery_context(
+            energy_data,
+            vertices,
+            params,
+            stage_controller=cast("StageController", _NullStageController()),
+            heartbeat=heartbeat,
         )
+        return discovery.discover(context)
 
     @classmethod
     def _run_tracing(
@@ -151,28 +152,17 @@ class EdgeManager:
         handle: StageController | _NullStageController = (
             stage_controller if stage_controller is not None else _NullStageController()
         )
-
-        policy = PipelinePolicy.from_params(params)
-        energy = energy_data.energy
-        vertex_positions = vertices.positions
-        microns_per_voxel = np.array(
-            params.get("microns_per_voxel", [1.0, 1.0, 1.0]),
-            dtype=policy.precision,
+        artifacts = EdgeExecutionArtifacts(
+            handle.artifact_path,
+            authorized=stage_controller is not None,
+            timing_authorized=_timing_writer_authorized(stage_controller),
         )
 
+        vertex_positions = vertices.positions
         if len(vertex_positions) == 0:
             return EdgeSet.from_dict(_empty_edges_result(vertex_positions))
 
-        lumen_radius_pixels_axes = resolve_lumen_radius_pixels_axes(
-            energy_data,
-            microns_per_voxel,
-            policy=policy,
-        )
-
         logger.info("Creating vertex center lookup image...")
-        vertex_center_image = paint_vertex_center_image(vertex_positions, energy.shape)
-        logger.info("Vertex center lookup image created")
-
         use_watershed = _use_watershed_discovery(energy_data.to_dict(), params)
         discovery = select_edge_discovery(energy_data, params)
 
@@ -204,29 +194,27 @@ class EdgeManager:
                     resumed=False,
                 )
 
-        t_discovery_start = time.perf_counter()
-        manifest = discovery.discover(
-            EdgeDiscoveryContext(
-                energy_data=energy_data,
-                vertices=vertices,
-                params=params,
-                stage_controller=cast("StageController", handle),
-                vertex_center_image=vertex_center_image,
-                lumen_radius_pixels_axes=lumen_radius_pixels_axes,
-                microns_per_voxel=microns_per_voxel,
-                heartbeat=heartbeat,
-            )
+        from slavv_python.analytics.parity.utils import now_iso
+        from slavv_python.analytics.performance.edge_timing import EdgeTimingRecord
+
+        execution_started_at = now_iso()
+        t_initialization_start = time.perf_counter()
+        context = prepare_edge_discovery_context(
+            energy_data,
+            vertices,
+            params,
+            stage_controller=cast("StageController", handle),
+            heartbeat=heartbeat,
         )
+        initialization_elapsed = time.perf_counter() - t_initialization_start
+        logger.info("Vertex center lookup image created")
+        t_discovery_start = time.perf_counter()
+        manifest = discovery.discover(context)
         t_discovery_end = time.perf_counter()
         discovery_elapsed = t_discovery_end - t_discovery_start
         logger.info("Edge discovery completed in %.2f seconds", discovery_elapsed)
+        discovery_completed_at = now_iso()
         if resumable:
-            from slavv_python.analytics.performance.edge_timing import (
-                build_edge_timing_payload,
-                write_edge_timing,
-            )
-            from slavv_python.engine.state.io import atomic_joblib_dump, atomic_write_json
-
             if use_watershed:
                 frontier_counts = frontier_origin_counts_from_diagnostics(manifest)
             else:
@@ -245,7 +233,25 @@ class EdgeManager:
                     for origin_index, count in (supplement_origin_counts or {}).items()
                 },
             )
-            atomic_write_json(handle.artifact_path("candidate_audit.json"), candidate_audit)
+            artifacts.write_candidates(manifest, candidate_audit)
+
+            # Persist the expensive Discovery boundary before Selection starts.
+            # If Selection is interrupted, the completed Discovery measurement
+            # remains available and the Candidate Set remains resumable.
+            artifacts.write_timing(
+                EdgeTimingRecord(
+                    initialization_seconds=initialization_elapsed,
+                    discovery_seconds=discovery_elapsed,
+                    selection_seconds=None,
+                    candidate_count=len(manifest.connections),
+                    edge_count=None,
+                    exact_route=use_watershed,
+                    writer_authorized=artifacts.timing_authorized,
+                    started_at=execution_started_at,
+                    discovery_completed_at=discovery_completed_at,
+                    completed_at=None,
+                ).to_payload()
+            )
 
             handle.update(
                 units_total=3,
@@ -254,8 +260,6 @@ class EdgeManager:
                 detail="Writing edge candidate artifacts",
                 resumed=False,
             )
-            candidates_payload = candidate_as_payload(manifest)
-            atomic_joblib_dump(candidates_payload, handle.artifact_path("candidates.pkl"))
             handle.update(
                 units_total=3,
                 units_completed=1,
@@ -289,17 +293,20 @@ class EdgeManager:
         chosen_dict = edge_set.to_dict()
 
         if resumable:
-            from slavv_python.engine.state.io import atomic_joblib_dump, atomic_write_json
-
-            timing_payload = build_edge_timing_payload(
+            timing_payload = EdgeTimingRecord(
+                initialization_seconds=initialization_elapsed,
                 discovery_seconds=discovery_elapsed,
                 selection_seconds=selection_elapsed,
                 candidate_count=len(manifest.connections),
                 edge_count=len(chosen_dict.get("traces", [])),
                 exact_route=use_watershed,
-                writer_authorized=resumable,
-            )
-            write_edge_timing(handle.artifact_path("phase2_edges_split.json"), timing_payload)
+                writer_authorized=artifacts.timing_authorized,
+                started_at=execution_started_at,
+                discovery_completed_at=discovery_completed_at,
+                completed_at=now_iso(),
+            ).to_payload()
+            artifacts.write_timing(timing_payload)
+            candidate_lifecycle = None
             from slavv_python.pipeline.edges.frontier_events import (
                 _build_frontier_candidate_lifecycle,
             )
@@ -309,12 +316,7 @@ class EdgeManager:
                     candidate_as_payload(manifest),
                     chosen_dict.get("chosen_candidate_indices"),
                 )
-                atomic_write_json(
-                    handle.artifact_path("candidate_lifecycle.json"),
-                    candidate_lifecycle,
-                )
-
-            atomic_joblib_dump(chosen_dict, handle.artifact_path("chosen_edges.pkl"))
+            artifacts.write_final(chosen_dict, candidate_lifecycle=candidate_lifecycle)
             handle.update(
                 units_total=3,
                 units_completed=3,
