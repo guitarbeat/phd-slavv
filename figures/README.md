@@ -52,8 +52,8 @@ They still scale cleanly inside `fullwidthfigure` when needed.
 
 | Script | Role |
 |--------|------|
-| [`campaign_series.py`](claim/campaign_series.py) | **Edit this when findings KPIs move** — all counts, labels, callouts, cert tones |
-| [`generate.py`](claim/generate.py) | View layer — paints series data to PDF/PNG |
+| [`campaign_series.py`](claim/campaign_series.py) | **Edit this when findings KPIs move**: all counts, labels, callouts, cert tones |
+| [`generate.py`](claim/generate.py) | View layer: paints series data to PDF/PNG |
 
 Prefer **PDF** for Word/LaTeX (vector text); PNG is 600 dpi for preview/slides.
 
@@ -84,7 +84,7 @@ Prefer **PDF** for Word/LaTeX (vector text); PNG is 600 dpi for preview/slides.
 
 > Python minus MATLAB on the full photo across audits. Edges under-selected
 > through `v7`, over-selected at `v10`, then matched at `v15`/`v16`. Network
-> leftover tracked Edges — not a separate Network bug. At historical `v16`,
+> leftover tracked Edges, not a separate Network bug. At historical `v16`,
 > Edges passed while Network still missed one strand. **Live:** Phase 1 CLOSED
 > on `canonical_full_v18` ([ONE TRUTH](../docs/reference/core/EXACT_PROOF_FINDINGS.md#one-truth--phase-1-parity-validated-from-disk)).
 
@@ -92,7 +92,7 @@ Prefer **PDF** for Word/LaTeX (vector text); PNG is 600 dpi for preview/slides.
 
 > Absolute leftover on the full-volume claim surface (live run root in
 > findings). Energy and vertices are closed; Edges pass the who-owns-which-voxel
-> bar. The historical `v16` miss was one Network strand, downstream of ranking —
+> bar. The historical `v16` miss was one Network strand, downstream of ranking,
 > now closed. Approximate strand % is not the ship bar. Live pair/strand
 > numbers: EXACT_PROOF_FINDINGS only. Close enough is not identical last digits.
 
@@ -108,7 +108,7 @@ When numbers in findings move, update constants in
 
 Live KPIs and stage pass/fail live only in
 [EXACT_PROOF_FINDINGS](../docs/reference/core/EXACT_PROOF_FINDINGS.md).
-These figures are a **publication highlight reel** of the residual campaign—not
+These figures are a **publication highlight reel** of the residual campaign, not
 the status log and not the methodology paper alone.
 
 | Figure | Story beat | Primary docs |

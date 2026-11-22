@@ -2,12 +2,12 @@
 """Standalone claim-driven MATLAB↔Python parity figures (view layer).
 
 Each figure answers one non-trivial question from the exact-parity campaign.
-Campaign numbers live only in campaign_series.py — update that file when
+Campaign numbers live only in campaign_series.py: update that file when
 docs/reference/core/EXACT_PROOF_FINDINGS.md moves.
 
 Layout is **wrap-first**: canvas ~3.3 in wide so type stays legible at
 ``0.48\\textwidth`` wrapfigure (and still scales cleanly to full-width).
-Long narrative stays in manuscript captions — not in-figure footnotes.
+Long narrative stays in manuscript captions, not in-figure footnotes.
 
 Outputs (written next to this script under figures/claim/):
   crop_missing_edges.{png,pdf}
@@ -405,7 +405,7 @@ def draw_funnel(ax: plt.Axes) -> None:
 
 
 def draw_agreement(ax: plt.Axes) -> None:
-    """Signed edge residual across canonical audits — the non-monotonic story."""
+    """Signed edge residual across canonical audits: the non-monotonic story."""
     audits: list[CanonicalAudit] = CANONICAL_AUDITS
     _claim(ax, AGREEMENT_CLAIM, width=34)
 
@@ -560,7 +560,7 @@ def draw_agreement(ax: plt.Axes) -> None:
 
 
 def draw_cert_table(ax: plt.Axes) -> None:
-    """Absolute remaining mismatches — compact stack for wrap width."""
+    """Absolute remaining mismatches: compact stack for wrap width."""
     rows: list[CertRow] = CERT_ROWS
     _claim(ax, CERT_CLAIM, width=34)
 

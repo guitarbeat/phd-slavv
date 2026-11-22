@@ -30,7 +30,7 @@ EDGE_PAIR_MULTISET_RESIDUAL = 0
 
 ORACLE_CROP_ID = STRETCH_CROP_ORACLE_ID
 ORACLE_FULL_VOLUME = "180709_E"
-# Latest full-volume claim surface (Phase 1 CLOSED — Edges + Network evaluated PASS)
+# Latest full-volume claim surface (Phase 1 CLOSED: Edges + Network evaluated PASS)
 CANONICAL_CLAIM_RUN = PHASE1_CLAIM_RUN_NAME
 
 # Log-scale floor so zero residual remains visible as a bar/point
@@ -63,7 +63,7 @@ class Annotation:
 
 
 # ---------------------------------------------------------------------------
-# Trajectory — generation residual (MATLAB final pairs absent from candidates)
+# Trajectory: generation residual (MATLAB final pairs absent from candidates)
 # ---------------------------------------------------------------------------
 
 TrajectoryKind = Literal["null", "leap", "polish", "closed"]
@@ -136,7 +136,7 @@ TRAJECTORY_STEPS: list[TrajectoryStep] = [
 
 
 # ---------------------------------------------------------------------------
-# Funnel — crop residual collapse (missing vs extra)
+# Funnel: crop residual collapse (missing vs extra)
 # ---------------------------------------------------------------------------
 
 

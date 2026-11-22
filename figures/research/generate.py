@@ -83,7 +83,7 @@ def figure_speedup(points: list[tuple[int, float]], serial_s_per_chunk: float, o
         color=["#d62728", "#1f77b4"],
     )
     ax2.set_ylabel("seconds per chunk (lower = faster)")
-    ax2.set_title(f"Per-chunk time  —  {speedup:.1f}x speedup (bit-exact)")
+    ax2.set_title(f"Per-chunk time: {speedup:.1f}x speedup (bit-exact)")
     for i, v in enumerate([serial_s_per_chunk, par_s_per_chunk]):
         ax2.text(i, v + 0.5, f"{v:.1f}s", ha="center", fontsize=10)
     ax2.grid(alpha=0.3, axis="y")
@@ -164,7 +164,7 @@ def figure_parity_composition(ulp: dict, out: Path) -> None:
     ax.set_xlim(0, total)
     ax.set_yticks([])
     ax.set_title(
-        f"Energy field parity composition  —  {total:,} voxels, scale mismatches = {scale_mm}"
+        f"Energy field parity composition: {total:,} voxels, scale mismatches = {scale_mm}"
     )
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.15), ncol=2, fontsize=8, frameon=False)
     fig.tight_layout()

@@ -12,8 +12,8 @@ artifacts** (no synthetic data) by [`generate.py`](generate.py).
 Lives under **`figures/research/`** so all publication assets share one tree
 with the proposal claim figures in [`figures/claim/`](../claim/).
 
-**Related (proposal appendix):** four standalone MATLAB→Python exact-parity
-claim figures — see [figures/README.md](../README.md).
+**Related (proposal appendix):** four standalone MATLAB to Python exact-parity
+claim figures (see [figures/README.md](../README.md)).
 
 ## Regenerate
 
@@ -25,7 +25,7 @@ python figures/research/generate.py `
 
 | Figure | Shows | Data source |
 |---|---|---|
-| `energy_ulp_histogram.png` | How far mismatching Energy voxels sit in last-digit units (ULP): typical 4, 90th percentile 13, yet the largest real gap is `1.99×10⁻¹¹`. A pure-ULP cutoff would still flag 37,174 voxels — that is why the ship bar is `np.allclose` ([ADR 0011](../../docs/adr/0011-energy-float-certification-policy.md)). | `exact_proof_energy_ulp.json` |
+| `energy_ulp_histogram.png` | How far mismatching Energy voxels sit in last-digit units (ULP): typical 4, 90th percentile 13, yet the largest real gap is `1.99×10⁻¹¹`. A pure-ULP cutoff would still flag 37,174 voxels: that is why the ship bar is `np.allclose` ([ADR 0011](../../docs/adr/0011-energy-float-certification-policy.md)). | `exact_proof_energy_ulp.json` |
 | `energy_parity_composition.png` | All 4,194,304 Energy voxels: ~9% identical bits, ~90% within the ULP cutoff (still `allclose`-pass), ~1% over that ULP cutoff (still `allclose`-pass). Scale-index mismatches = **0**. | `exact_proof_energy_ulp.json` |
 | `energy_octave1_speedup.png` | Octave-1 Energy throughput, parallel (`n_jobs=6`) vs serial: **~4.1× faster, same bits**. | joblib progress log; serial baseline from `n_jobs=1` |
 
