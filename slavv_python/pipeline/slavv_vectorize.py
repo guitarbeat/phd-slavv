@@ -85,10 +85,15 @@ def vectorize_python(
         vertices_data = results.get("vertices")
         if vertices_data is None:
             raise ValueError("Vertices required for edges")
+        energy_data = results.get("energy")
+        if energy_data is None:
+            raise ValueError("Energy result required for edges")
         if use_resumable and stage_controller:
-            edges: EdgeSet = EdgeManager.run_resumable(vertices_data, params, stage_controller)
+            edges: EdgeSet = EdgeManager.run_resumable(
+                energy_data, vertices_data, params, stage_controller
+            )
         else:
-            edges = EdgeManager.run(vertices_data, params)
+            edges = EdgeManager.run(energy_data, vertices_data, params)
         results["edges"] = edges
         if final_stage == "edges":
             return results
@@ -98,12 +103,15 @@ def vectorize_python(
         edges_data = results.get("edges")
         if edges_data is None:
             raise ValueError("Edges required for network")
+        vertices_data = results.get("vertices")
+        if vertices_data is None:
+            raise ValueError("Vertices required for network")
         if use_resumable and stage_controller:
             network: NetworkResult = NetworkManager.run_resumable(
-                edges_data, params, stage_controller
+                edges_data, vertices_data, params, stage_controller
             )
         else:
-            network = NetworkManager.run(edges_data, params)
+            network = NetworkManager.run(edges_data, vertices_data, params)
         results["network"] = network
 
     return results

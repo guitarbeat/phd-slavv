@@ -62,10 +62,12 @@ def _energy_lattice(
     image_shape: tuple[int, ...],
     max_voxels: int,
     margin: int,
-    get_chunking_lattice_func,
+    get_chunking_lattice_func=None,
 ) -> list[
     tuple[tuple[slice, slice, slice], tuple[slice, slice, slice], tuple[slice, slice, slice]]
 ]:
+    if get_chunking_lattice_func is None:
+        get_chunking_lattice_func = get_chunking_lattice_v190
     total_voxels = int(np.prod(image_shape))
     if total_voxels > max_voxels:
         return cast(
