@@ -131,7 +131,7 @@ the status log and not the methodology paper alone.
 
 ## PhD proposal manuscript (live include)
 
-Appendix `.tex` includes live under the PhD-Writing manuscript, not in this
+Appendix `.tex` includes live under the `phd-dissertation` repository, not in this
 repo (`figures/include/` is not checked in here). Source stems below are the
 PDFs/PNGs generated in `figures/claim/`.
 
@@ -142,13 +142,13 @@ PDFs/PNGs generated in `figures/claim/`.
 | `fig-appendix-parity-agreement` | `claim/full_signed_residual` |
 | `fig-appendix-parity-cert-table` | `claim/mismatch_budget` |
 
-Macros: `PhD-Writing/manuscript/config/figure-assets.tex`.
+Macros: `phd-dissertation/latex-shared/config/figure-assets.tex`.
 Prose: `sections/30-backmatter/appendix/370-analytical-development.tex`.
 
 **After regenerating here**, re-copy:
 
 ```powershell
-$dst = "D:\2P_Data\Aaron\PhD-Writing\manuscript\figures"
+$dst = "/Volumes/LoveSSD/NeuroVASC/repos/phd-dissertation/latex-shared/figures/assets/appendix"
 Copy-Item -Force figures\claim\crop_missing_edges.pdf     "$dst\fig-appendix-parity-trajectory.pdf"
 Copy-Item -Force figures\claim\crop_missing_edges.png     "$dst\fig-appendix-parity-trajectory.png"
 Copy-Item -Force figures\claim\crop_leftover_funnel.pdf   "$dst\fig-appendix-parity-funnel.pdf"

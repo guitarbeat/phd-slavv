@@ -16,7 +16,7 @@ _REPO = Path(__file__).resolve().parents[2]
 def test_e6_project_and_original_request_agree_on_production_only_probes() -> None:
     """E6 / KTD2: living docs must not claim dual-run of cleaned_transpiled."""
     project = (_REPO / "PROJECT.md").read_text(encoding="utf-8")
-    original = (_REPO / "ORIGINAL_REQUEST.md").read_text(encoding="utf-8")
+    original = (_REPO / "docs" / "archive" / "ORIGINAL_REQUEST.md").read_text(encoding="utf-8")
     for text, label in ((project, "PROJECT.md"), (original, "ORIGINAL_REQUEST.md")):
         assert "production_probe" in text, f"{label} missing production_probe"
         assert "dual-run" in text.lower(), label

@@ -186,8 +186,6 @@ workspace/**/candidate_audit.json
 agent-tools/
 terminals/
 AUDIT_REPORT.md
-TEST_INFRA.md
-TEST_READY.md
 # transient semantic-review tool output
 semantic-review/
 
